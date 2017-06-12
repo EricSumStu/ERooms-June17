@@ -15,5 +15,10 @@ android:
     # if you need to run emulator(s) during your tests
     - sys-img-armeabi-v7a-android-25
     #- sys-img-armeabi-v7a-android-17
+  licenses:
+    - 'android-sdk-preview-license-.+'
+    - 'android-sdk-license-.+'
+    - 'google-gdk-license-.+'
 notifications:
-    slack: tv3:4CrFRQrFpjqsZpFM6XLuAb1H
+  slack: tv3:4CrFRQrFpjqsZpFM6XLuAb1H
+  email: false
