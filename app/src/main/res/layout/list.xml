@@ -9,7 +9,7 @@ android:background="#f4f4f4" >
     android:id="@+id/textView"
     android:layout_width="465dp"
     android:layout_height="40dp"
-    android:text="Search by Zone"
+    android:text="@string/Header"
     android:textSize="30sp"/>
 
 <ExpandableListView
