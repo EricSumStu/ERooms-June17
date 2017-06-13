@@ -1,32 +1,12 @@
 language: android
 jdk: oraclejdk8
-android:
-  components:
-    - tools
-    - platform-tools
-    - tools
-
-    - build-tools-25.0.3
-    - android-25
-    - extra-google-m2repository
-    - extra-android-m2repository
-
-    # Specify at least one system image,
-    # if you need to run emulator(s) during your tests
-    - sys-img-armeabi-v7a-android-25
-    #- sys-img-armeabi-v7a-android-17
-  licenses:
-    - 'android-sdk-preview-license-.+'
-    - 'android-sdk-license-.+'
-    - 'google-gdk-license-.+'
 install:
-  - echo yes | sdkmanager "tools"
-  - echo yes | sdkmanager "platforms;android-25" # Latest platform required by SDK tools
-  - echo yes | sdkmanager "platforms;android-${API}" # Android platform required by emulator
-  - echo yes | sdkmanager "extras;android;m2repository"
-  - echo yes | sdkmanager "extras;google;m2repository"
-  - echo yes | sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2"
-  - echo yes | sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.2"
+  - echo y | android update sdk -u -a -t tools
+  - echo y | android update sdk -u -a -t platform-tools
+  - echo y | android update sdk -u -a -t build-tools-25.0.2
+  - echo y | android update sdk -u -a -t android-25
+  - echo y | android update sdk -u -a -t extra-google-m2repository
+  - echo y | android update sdk -u -a -t extra-android-m2repository
 env:
   global:
     - API=25 # Android API level 25 by default
