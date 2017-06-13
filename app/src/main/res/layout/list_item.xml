@@ -9,7 +9,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:textColor="#e72fbf04"
+        android:clickable="true"
+        android:textColor="@drawable/text_selector"
         android:paddingTop="5sp"
         android:paddingBottom="5dp"
         android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft" />
