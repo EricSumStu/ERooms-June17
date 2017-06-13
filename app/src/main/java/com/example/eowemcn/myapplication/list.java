@@ -33,7 +33,6 @@ public class list extends Activity {
         TextView myTextView4 = (TextView) findViewById(R.id.textview4);
         myTextView4.setTypeface(myTypeFace4);
 
-        ListView list=(List)findViewById(R.id.lvExp);
 
 
         // get the listview
