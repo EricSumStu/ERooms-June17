@@ -23,3 +23,6 @@ android:
     - extra-android-m2repository
     - extra-google-m2repository
 script: ./gradlew clean assembleDebug check
+notifications:
+   slack: tv3:4CrFRQrFpjqsZpFM6XLuAb1H
+   email: false
