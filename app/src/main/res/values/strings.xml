@@ -4,4 +4,7 @@
     <string name="Button1">Map of Campus</string>
     <string name="textview1">List of Rooms</string>
     <string name="Button3">Free Rooms</string>
+    <string name = "appbar_scrolling_view_behavior">Maps</string>
+
+
 </resources>

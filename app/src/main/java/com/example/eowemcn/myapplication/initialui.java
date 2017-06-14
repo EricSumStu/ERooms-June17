@@ -11,6 +11,19 @@ import android.widget.TextView;
 
 public class initialui extends Activity {
 
+    public Button textview2;
+        public void init2() {
+            textview2 = (Button) findViewById(R.id.textview2);
+            textview2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent newscreen1 = new Intent(initialui.this, Maps.class);
+
+                    startActivity(newscreen1);
+                }
+            });
+        }
+
     public Button textview1;
 
         public void init(){
@@ -27,7 +40,8 @@ public class initialui extends Activity {
             });
 
 
-        }
+
+                }
 
     @Override
     protected void onCreate(Bundle savedInstancesState) {
@@ -47,6 +61,7 @@ public class initialui extends Activity {
         myImageView.setImageResource(R.drawable.logo);
 
         init();
+        init2();
 
     }
 
