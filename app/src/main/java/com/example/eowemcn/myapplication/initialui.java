@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.eowemcn.myapplication.list.ListActivity;
+import com.example.eowemcn.myapplication.map.Maps;
 
 public class initialui extends Activity {
 

@@ -23,7 +23,7 @@ import java.util.List;
 
 public class ListActivity extends Activity {
 
-
+    private boolean clicked;
     RoomListAdapter listAdapter;
     ExpandableListView expListView;
     List<String> listDataHeader;
@@ -38,7 +38,7 @@ public class ListActivity extends Activity {
         TextView myTextView4 = (TextView) findViewById(R.id.textview4);
         myTextView4.setTypeface(myTypeFace4);
 
-
+        final TextView textviewclick = (TextView) findViewById(R.id.lblListItem);
 
         // get the listview
         expListView = (ExpandableListView) findViewById(R.id.lvExp);
@@ -93,7 +93,12 @@ public class ListActivity extends Activity {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v,
                                         int groupPosition, int childPosition, long id) {
-                Toast.makeText(
+                TextView textView = (TextView) parent.findViewById(R.id.lblListItem);
+
+                textView.setTextColor(getResources().getColor(R.color.colorAccent));
+
+
+ /*               Toast.makeText(
                         getApplicationContext(),
                         listDataHeader.get(groupPosition)
                                 + " : "
@@ -101,6 +106,7 @@ public class ListActivity extends Activity {
                                 listDataHeader.get(groupPosition)).get(
                                 childPosition), Toast.LENGTH_SHORT)
                         .show();
+                        */
                 return false;
             }
         });
