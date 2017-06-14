@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.eowemcn.myapplication.list.ListActivity;
+
 public class initialui extends Activity {
 
     public Button textview1;
@@ -19,7 +21,7 @@ public class initialui extends Activity {
                 @Override
                 public void onClick(View v) {
 
-                    Intent newscreen = new Intent(initialui.this,list.class);
+                    Intent newscreen = new Intent(initialui.this,ListActivity.class);
 
                     startActivity(newscreen);
 
