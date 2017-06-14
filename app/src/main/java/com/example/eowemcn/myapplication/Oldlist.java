@@ -14,7 +14,7 @@ import android.widget.ExpandableListView.OnGroupExpandListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class list extends Activity {
+public class Oldlist extends Activity {
 
 
     ExpandableListAdapter listAdapter;
@@ -36,12 +36,12 @@ public class list extends Activity {
         // get the listview
         expListView = (ExpandableListView) findViewById(R.id.lvExp);
 
-        // preparing list data
+        // preparing Oldlist data
         prepareListData();
 
         listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
 
-        // setting list adapter
+        // setting Oldlist adapter
         expListView.setAdapter(listAdapter);
 
         // Listview Group click listener
@@ -102,7 +102,7 @@ public class list extends Activity {
 
 
     /*
-     * Preparing the list data
+     * Preparing the Oldlist data
      */
     private void prepareListData() {
         listDataHeader = new ArrayList<>();
