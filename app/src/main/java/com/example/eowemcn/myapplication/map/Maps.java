@@ -1,4 +1,4 @@
-package com.example.eowemcn.myapplication;
+package com.example.eowemcn.myapplication.map;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -8,6 +8,11 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+
+import com.example.eowemcn.myapplication.R;
+import com.example.eowemcn.myapplication.map.Tab1main_map;
+import com.example.eowemcn.myapplication.map.Tab2upstairs;
+import com.example.eowemcn.myapplication.map.Tab3downstairs;
 
 public class Maps extends AppCompatActivity {
 
