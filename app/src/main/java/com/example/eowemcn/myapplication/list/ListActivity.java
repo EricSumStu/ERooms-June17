@@ -94,7 +94,18 @@ public class ListActivity extends Activity {
                                         int groupPosition, int childPosition, long id) {
                 TextView textView = (TextView) parent.findViewById(R.id.lblListItem);
 
-                textView.setTextColor(getResources().getColor(R.color.colorAccent));
+
+
+
+                if(!clicked){
+                    textView.setTextColor(getResources().getColor(R.color.colorAccent));
+                    // set the default color
+                    clicked = true;
+                }else{
+                    textView.setTextColor(getResources().getColor(R.color.colorWhite));
+                    //set secondary color
+                    clicked = false;
+                }
 
 
  /*               Toast.makeText(
