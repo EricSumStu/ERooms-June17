@@ -6,13 +6,11 @@ import android.app.Activity;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.ExpandableListView.OnGroupClickListener;
 import android.widget.ExpandableListView.OnGroupCollapseListener;
 import android.widget.ExpandableListView.OnGroupExpandListener;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -107,8 +105,8 @@ public class list extends Activity {
      * Preparing the list data
      */
     private void prepareListData() {
-        listDataHeader = new ArrayList<String>();
-        listDataChild = new HashMap<String, List<String>>();
+        listDataHeader = new ArrayList<>();
+        listDataChild = new HashMap<>();
 
         // Adding child data
         listDataHeader.add("Zone 1");
@@ -122,7 +120,7 @@ public class list extends Activity {
 
 
         // Adding child data
-        List<String> zone1 = new ArrayList<String>();
+        List<String> zone1 = new ArrayList<>();
         zone1.add("Lars Magnus");
         zone1.add("Reykjavik");
         zone1.add("Nuuk");
@@ -134,7 +132,7 @@ public class list extends Activity {
         zone1.add("Quiet Room 1-29");
 
 
-        List<String> zone3 = new ArrayList<String>();
+        List<String> zone3 = new ArrayList<>();
         zone3.add("Paris");
         zone3.add("Athlone- Conference Room");
         zone3.add("Quiet Room 3-36");
@@ -142,7 +140,7 @@ public class list extends Activity {
         zone3.add("Quiet Room 3-45");
 
 
-        List<String> zone4 = new  ArrayList<String>();
+        List<String> zone4 = new  ArrayList<>();
         zone4.add("Demo Room");
         zone4.add("Kuala Lumpur");
         zone4.add("Quiet Room 4-01");
@@ -153,7 +151,7 @@ public class list extends Activity {
         zone4.add("Quiet Room 4-56");
         zone4.add("Quiet Room 4-57");
 
-        List<String> zone5 = new  ArrayList<String>();
+        List<String> zone5 = new  ArrayList<>();
         zone5.add("Stockholm");
         zone5.add("Berlin");
         zone5.add("Helsinki");
@@ -161,7 +159,7 @@ public class list extends Activity {
         zone5.add("Quiet Room 5-04");
         zone5.add("Quiet Room 5-10");
 
-        List<String> zone6 =  new  ArrayList<String>();
+        List<String> zone6 =  new  ArrayList<>();
         zone6.add("Wellington");
         zone6.add("Canberra");
         zone6.add("Tokyo");
@@ -176,7 +174,7 @@ public class list extends Activity {
         zone6.add("Quiet Room 6-36");
 
 
-        List<String> zone7 =  new ArrayList<String>();
+        List<String> zone7 =  new ArrayList<>();
         zone7.add("Cape Town");
         zone7.add("Jakarta");
         zone7.add("The Spectacular N");
@@ -188,7 +186,7 @@ public class list extends Activity {
         zone7.add("Quiet Room 7-19");
         zone7.add("Quiet Room 7-20");
 
-        List<String> zone8 = new  ArrayList<String>();
+        List<String> zone8 = new  ArrayList<>();
         zone8.add("Honolulu");
         zone8.add("Ottowa");
         zone8.add("Anchorage");
@@ -201,7 +199,7 @@ public class list extends Activity {
         zone8.add("Quiet Room 8-34");
         zone8.add("Quiet Room 8-35");
 
-        List<String> zone9 = new  ArrayList<String>();
+        List<String> zone9 = new  ArrayList<>();
         zone9.add("Buenos Aires");
         zone9.add("Brasilla");
         zone9.add("Washington DC");
