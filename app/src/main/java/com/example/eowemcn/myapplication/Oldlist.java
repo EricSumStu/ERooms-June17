@@ -177,8 +177,6 @@ public class Oldlist extends Activity {
         List<String> zone7 =  new ArrayList<>();
         zone7.add("Cape Town");
         zone7.add("Jakarta");
-        zone7.add("The Spectacular N");
-        zone7.add("The Canyons");
         zone7.add("Quiet Room 7-08");
         zone7.add("Quiet Room 7-09");
         zone7.add("Quiet Room 7-11");
