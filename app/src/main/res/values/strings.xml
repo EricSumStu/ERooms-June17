@@ -50,12 +50,37 @@
 
     <string name="Cape_Town">Cape Town</string>
     <string name="Jakarta">Jakarta</string>
-    <string name="Quiet_Room_708">Quiet Room 7.08</string>
-    <string name="Quiet_Room_709">Quiet Room 7.09 </string>
-    <string name="Quiet_Room_711">Quiet Room 7.11</string>
-    <string name="Quiet_Room_714">Quiet Room 7.14 </string>
-    <string name="Quiet_Room_719">Quiet Room 7.19 </string>
-    <string name="Quiet_Room_720">Quiet Room 7.20 </string>
+    <string name="Quiet_Room_7.08">Quiet Room 7.08</string>
+    <string name="Quiet_Room_7.09">Quiet Room 7.09 </string>
+    <string name="Quiet_Room_7.11">Quiet Room 7.11</string>
+    <string name="Quiet_Room_7.14">Quiet Room 7.14 </string>
+    <string name="Quiet_Room_7.19">Quiet Room 7.19 </string>
+    <string name="Quiet_Room_7.20">Quiet Room 7.20 </string>
+
+    <string name="Honolulu">Honolulu</string>
+    <string name="Ottowa">Ottowa</string>
+    <string name="Anchorage">Anchorage</string>
+    <string name="Quiet_Room_8.12">Quiet Room 8.12</string>
+    <string name="Quiet_Room_8.18">Quiet Room 8.18</string>
+    <string name="Quiet_Room_8.23">Quiet Room 8.23</string>
+    <string name="Quiet_Room_8.28">Quiet Room 8.28</string>
+    <string name="Quiet_Room_8.29">Quiet Room 8.29</string>
+    <string name="Quiet_Room_8.30">Quiet Room 8.30</string>
+    <string name="Quiet_Room_8.34">Quiet Room 8.34</string>
+    <string name="Quiet_Room_8.35">Quiet Room 8.35</string>
+
+    <string name="Buenos_Aires">Buenos Aires</string>
+    <string name="Brasillia">Brasillia</string>
+    <string name="Washington_DC">Washington DC</string>
+    <string name="V.A_Lab">V.A Lab</string>
+    <string name="Quiet_Room_9.06">Quiet Room 9.06 </string>
+    <string name="Quiet_Room_9.17">Quiet Room 9.17</string>
+    <string name="Quiet_Room_9.25">Quiet Room 9.25 </string>
+    <string name="Quiet_Room_9.27">Quiet Room 9.27</string>
+    <string name="Quiet_Room_9.39">Quiet Room 9.39</string>
+    <string name="Quiet_Room_9.41">Quiet Room 9.41 </string>
+    <string name="Quiet_Room_9.48">Quiet Room 9.48</string>
+
 
 
 
