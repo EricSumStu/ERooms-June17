@@ -93,17 +93,17 @@ public class ListActivity extends Activity {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v,
                                         int groupPosition, int childPosition, long id) {
-                TextView textView = (TextView) parent.findViewById(R.id.lblListItem);
+                TextView textViewColor = (TextView) parent.findViewById(R.id.lblListItem);
 
 
 
 
                 if(!clicked){
-                    textView.setTextColor(getResources().getColor(R.color.drawer_color));
+                    textViewColor.setTextColor(getResources().getColor(R.color.drawer_color));
                     // set the default color
                     clicked = true;
                 }else{
-                    textView.setTextColor(getResources().getColor(R.color.colorGreen));
+                    textViewColor.setTextColor(getResources().getColor(R.color.colorGreen));
                     //set secondary color
                     clicked = false;
                 }
