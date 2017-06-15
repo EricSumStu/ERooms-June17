@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="Lars_Magnus">40</integer>
+    <integer name="Reykjavik">12</integer>
+    <integer name="Nuuk">12</integer>
+    <integer name="Quiet_Room_1.16">4</integer>
+    <integer name="Quiet_Room_1.17">4</integer>
+    <integer name="Quiet_Room_1.20">4</integer>
+    <integer name="Quiet_Room_1.21">4</integer>
+    <integer name="Quiet_Room_1.28">4</integer>
+    <integer name="Quiet_Room_1.29">4</integer>
+
+
+
+</resources>

@@ -29,6 +29,9 @@ public class ListActivity extends Activity {
     List<String> listDataHeader;
     HashMap<String, List<Room>> listDataChild;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -146,27 +149,33 @@ public class ListActivity extends Activity {
         List<Room> zone1 = new ArrayList<>();
         String larsName = getString(R.string.LarsMagnus); // get the room name from res/values/strings.xml
         Room lars = new Room(larsName); // Create a room object with the name
+        lars.setCapacity(R.integer.Lars_Magnus);
         zone1.add(lars); // add the room to the list of rooms for zone1
 
         // add another room
         String rey = getString(R.string.Reykjavik); // get the room name from res/values/strings.xml
         Room reyk = new Room(rey); // Create a room object with the name
+        lars.setCapacity(R.integer.Lars_Magnus);
         zone1.add(reyk); // add the room to the list of rooms for zone1
 
         String nuu = getString(R.string.Nuuk); // get the room name from res/values/strings.xml
         Room nuuk = new Room(nuu); // Create a room object with the name
+        lars.setCapacity(R.integer.Lars_Magnus);
         zone1.add(nuuk); // add the room to the list of rooms for zone1
 
         String q1 = getString(R.string.Quiet_Room_1_16); // get the room name from res/values/strings.xml
         Room qu1 = new Room(q1); // Create a room object with the name
+        lars.setCapacity(R.integer.Lars_Magnus);
         zone1.add(qu1); // add the room to the list of rooms for zone1
 
         String q2 = getString(R.string.Quiet_Room_1_17); // get the room name from res/values/strings.xml
         Room qu2 = new Room(q2); // Create a room object with the name
+        lars.setCapacity(R.integer.Lars_Magnus);
         zone1.add(qu2); // add the room to the list of rooms for zone1
 
         String q3 = getString(R.string.Quiet_Room_1_20); // get the room name from res/values/strings.xml
         Room qu3 = new Room(q3); // Create a room object with the name
+        lars.setCapacity(R.integer.Lars_Magnus);
         zone1.add(qu3); // add the room to the list of rooms for zone1
 
         String q4 = getString(R.string.Quiet_Room_1_21); // get the room name from res/values/strings.xml

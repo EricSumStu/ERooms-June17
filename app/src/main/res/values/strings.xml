@@ -4,6 +4,7 @@
     <string name="Button1">Map of Campus</string>
     <string name="textview1">List of Rooms</string>
     <string name="Button3">Free Rooms</string>
+
     <string name="LarsMagnus">Lars Magnus</string>
     <string name="Reykjavik">Reykjavik</string>
     <string name="Nuuk">Nuuk</string>
@@ -13,11 +14,13 @@
     <string name="Quiet_Room_1.21">Quiet Room 1.21</string>
     <string name="Quiet_Room_1.28">Quiet Room 1.28</string>
     <string name="Quiet_Room_1.29">Quiet Room 1.29</string>
+
     <string name="Paris">Paris</string>
     <string name="Athlone_Conference_Room">Athlone Conference Room</string>
     <string name="Quiet_Room_3.36">Quiet Room 3.36</string>
     <string name="Quiet_Room_3.44">Quiet Room 3.44</string>
     <string name="Quiet_Room_3.45">Quiet Room 3.45</string>
+
     <string name="Demo_Room">Demo Room</string>
     <string name="Kuala_Lumpur">Kuala Lumpur</string>
     <string name="Quiet_Room_4.01">Quiet Room 4.01</string>
@@ -27,6 +30,7 @@
     <string name="Quiet_Room_4.55">Quiet Room 4.55</string>
     <string name="Quiet_Room_4.56">Quiet Room 4.56</string>
     <string name="Quiet_Room_4.57">Quiet Room 4.57</string>
+
     <string name="Stockholm">Stockholm</string>
     <string name="Berlin">Berlin</string>
     <string name="Helsinki">Helsinki</string>
