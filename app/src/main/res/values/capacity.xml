@@ -10,6 +10,74 @@
     <integer name="Quiet_Room_1.28">4</integer>
     <integer name="Quiet_Room_1.29">4</integer>
 
+    <integer name="Paris">12</integer>
+    <integer name="Athlone_Conference_Room">20</integer>
+    <integer name="Quiet_Room_3.36">3</integer>
+    <integer name="Quiet_Room_3.44">3</integer>
+    <integer name="Quiet_Room_3.45">3</integer>
 
+    <integer name="Demo_Room">25</integer>
+    <integer name="Kuala_Lumpur">12</integer>
+    <integer name="Quiet_Room_4.01">4</integer>
+    <integer name="Quiet_Room_4.02">4</integer>
+    <integer name="Quiet_Room_4.27">4</integer>
+    <integer name="Quiet_Room_4.45">4</integer>
+    <integer name="Quiet_Room_4.55">4</integer>
+    <integer name="Quiet_Room_4.56">4</integer>
+    <integer name="Quiet_Room_4.57">4</integer>
+
+    <integer name="Stockholm">12</integer>
+    <integer name="Berlin">12</integer>
+    <integer name="Helsinki">12</integer>
+    <integer name="Rome">12</integer>
+    <integer name="Quiet_Room_5.04">5</integer>
+    <integer name="Quiet_Room_5.10">5</integer>
+
+    <integer name="Wellington">12</integer>
+    <integer name="Canberra">12</integer>
+    <integer name="Tokyo">12</integer>
+    <integer name="Warsaw">12</integer>
+    <integer name="Kiev">12</integer>
+    <integer name="Moscow">12</integer>
+    <integer name="Quiet_Room_6.01">4</integer>
+    <integer name="Quiet_Room_6.15">4</integer>
+    <integer name="Quiet_Room_6.16">4</integer>
+    <integer name="Quiet_Room_6.29">4</integer>
+    <integer name="Quiet_Room_6.30">4</integer>
+    <integer name="Quiet_Room_6.36">4</integer>
+
+
+    <integer name="Cape_Town">10</integer>
+    <integer name="Jakarta">12</integer>
+    <integer name="Quiet_Room_7.08">4</integer>
+    <integer name="Quiet_Room_7.09">4</integer>
+    <integer name="Quiet_Room_7.11">4</integer>
+    <integer name="Quiet_Room_7.14">4</integer>
+    <integer name="Quiet_Room_7.19">4</integer>
+    <integer name="Quiet_Room_7.20">4</integer>
+
+    <integer name="Honolulu">12</integer>
+    <integer name="Ottowa">12</integer>
+    <integer name="Anchorage">20</integer>
+    <integer name="Quiet_Room_8.12">4</integer>
+    <integer name="Quiet_Room_8.18">4</integer>
+    <integer name="Quiet_Room_8.23">4</integer>
+    <integer name="Quiet_Room_8.28">4</integer>
+    <integer name="Quiet_Room_8.29">4</integer>
+    <integer name="Quiet_Room_8.30">4</integer>
+    <integer name="Quiet_Room_8.34">4</integer>
+    <integer name="Quiet_Room_8.35">4</integer>
+
+    <integer name="Buenos_Aires">10</integer>
+    <integer name="Brasillia">10</integer>
+    <integer name="Washington_DC">20</integer>
+    <integer name="V_A_Lab">4</integer>
+    <integer name="Quiet_Room_9.06">4</integer>
+    <integer name="Quiet_Room_9.17">4</integer>
+    <integer name="Quiet_Room_9.25">4</integer>
+    <integer name="Quiet_Room_9.27">4</integer>
+    <integer name="Quiet_Room_9.39">4</integer>
+    <integer name="Quiet_Room_9.41">4</integer>
+    <integer name="Quiet_Room_9.48">4</integer>
 
 </resources>
