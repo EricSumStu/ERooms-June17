@@ -99,17 +99,17 @@ public class ListActivity extends Activity {
 
 
                 if(!clicked){
-                    textView.setTextColor(getResources().getColor(R.color.colorAccent));
+                    textView.setTextColor(getResources().getColor(R.color.drawer_color));
                     // set the default color
                     clicked = true;
                 }else{
-                    textView.setTextColor(getResources().getColor(R.color.colorWhite));
+                    textView.setTextColor(getResources().getColor(R.color.colorGreen));
                     //set secondary color
                     clicked = false;
                 }
 
 
- /*               Toast.makeText(
+                Toast.makeText(
                         getApplicationContext(),
                         listDataHeader.get(groupPosition)
                                 + " : "
@@ -117,7 +117,6 @@ public class ListActivity extends Activity {
                                 listDataHeader.get(groupPosition)).get(
                                 childPosition), Toast.LENGTH_SHORT)
                         .show();
-                        */
                 return false;
             }
         });
