@@ -93,7 +93,7 @@ public class ListActivity extends Activity {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v,
                                         int groupPosition, int childPosition, long id) {
-                TextView textViewColor = (TextView) parent.findViewById(R.id.lblListItem);
+                TextView textViewColor = (TextView) v.findViewById(R.id.lblListItem);
 
 
 
