@@ -112,14 +112,14 @@ public class ListActivity extends Activity {
                 }
 
 
-                Toast.makeText(
+          /*      Toast.makeText(
                         getApplicationContext(),
                         listDataHeader.get(groupPosition)
                                 + " : "
                                 + listDataChild.get(
                                 listDataHeader.get(groupPosition)).get(
                                 childPosition), Toast.LENGTH_SHORT)
-                        .show();
+                        .show(); */
                 return false;
             }
         });
