@@ -133,6 +133,14 @@ public class ListActivity extends Activity {
 
         // Adding child data
         listDataHeader.add("Zone 1");
+        listDataHeader.add("Zone 3");
+        listDataHeader.add("Zone 4");
+        listDataHeader.add("Zone 5");
+        listDataHeader.add("Zone 6");
+        listDataHeader.add("Zone 7");
+        listDataHeader.add("Zone 8");
+        listDataHeader.add("Zone 9");
+
 
         // Adding child data
         List<Room> zone1 = new ArrayList<>();
@@ -314,32 +322,132 @@ public class ListActivity extends Activity {
         Room Ja = new Room(J); // Create a room object with the name
         zone7.add(Ja); // add the room to the list of rooms for zone1
 
-        String Q708 = getString(R.string.Quiet_Room_708); // get the room name from res/values/strings.xml
+        String Q708 = getString(R.string.Quiet_Room_7_08); // get the room name from res/values/strings.xml
         Room Qr708 = new Room(Q708); // Create a room object with the name
         zone7.add(Qr708); // add the room to the list of rooms for zone1
 
-        String Q709 = getString(R.string.Quiet_Room_709); // get the room name from res/values/strings.xml
+        String Q709 = getString(R.string.Quiet_Room_7_09); // get the room name from res/values/strings.xml
         Room Qr709 = new Room(Q709); // Create a room object with the name
         zone7.add(Qr709); // add the room to the list of rooms for zone1
 
-        String Q711 = getString(R.string.Quiet_Room_711); // get the room name from res/values/strings.xml
+        String Q711 = getString(R.string.Quiet_Room_7_11); // get the room name from res/values/strings.xml
         Room Qr711 = new Room(Q711); // Create a room object with the name
         zone7.add(Qr711); // add the room to the list of rooms for zone1
 
-        String Q714 = getString(R.string.Quiet_Room_714); // get the room name from res/values/strings.xml
+        String Q714 = getString(R.string.Quiet_Room_7_14); // get the room name from res/values/strings.xml
         Room Qr714 = new Room(Q714); // Create a room object with the name
         zone7.add(Qr714); // add the room to the list of rooms for zone1
 
-        String Q719 = getString(R.string.Quiet_Room_719); // get the room name from res/values/strings.xml
+        String Q719 = getString(R.string.Quiet_Room_7_19); // get the room name from res/values/strings.xml
         Room Qr719 = new Room(Q719); // Create a room object with the name
         zone7.add(Qr719); // add the room to the list of rooms for zone1
-        String Q720 = getString(R.string.Quiet_Room_720); // get the room name from res/values/strings.xml
+
+        String Q720 = getString(R.string.Quiet_Room_7_20); // get the room name from res/values/strings.xml
         Room Qr720 = new Room(Q720); // Create a room object with the name
         zone7.add(Qr720); // add the room to the list of rooms for zone1
+
+        List<Room> zone8 = new ArrayList<>();
+        String Ho = getString(R.string.Honolulu); // get the room name from res/values/strings.xml
+        Room Hon = new Room(Ho); // Create a room object with the name
+        zone8.add(Hon); // add the room to the list of rooms for zone1
+
+        String Ot = getString(R.string.Ottowa); // get the room name from res/values/strings.xml
+        Room Ott = new Room(Ot); // Create a room object with the name
+        zone8.add(Ott); // add the room to the list of rooms for zone1
+
+        String An = getString(R.string.Anchorage); // get the room name from res/values/strings.xml
+        Room Anc = new Room(An); // Create a room object with the name
+        zone8.add(Anc); // add the room to the list of rooms for zone1
+
+        String Q812 = getString(R.string.Quiet_Room_8_12); // get the room name from res/values/strings.xml
+        Room Qr812 = new Room(Q812); // Create a room object with the name
+        zone8.add(Qr812); // add the room to the list of rooms for zone1
+
+        String Q818 = getString(R.string.Quiet_Room_8_18); // get the room name from res/values/strings.xml
+        Room Qr818 = new Room(Q818); // Create a room object with the name
+        zone8.add(Qr818); // add the room to the list of rooms for zone1
+
+        String Q823 = getString(R.string.Quiet_Room_8_23); // get the room name from res/values/strings.xml
+        Room Qr823 = new Room(Q823); // Create a room object with the name
+        zone8.add(Qr823); // add the room to the list of rooms for zone1
+
+        String Q828 = getString(R.string.Quiet_Room_8_28); // get the room name from res/values/strings.xml
+        Room Qr828 = new Room(Q828); // Create a room object with the name
+        zone8.add(Qr828); // add the room to the list of rooms for zone1
+
+        String Q829 = getString(R.string.Quiet_Room_8_29); // get the room name from res/values/strings.xml
+        Room Qr829 = new Room(Q829); // Create a room object with the name
+        zone8.add(Qr829); // add the room to the list of rooms for zone1
+
+        String Q830 = getString(R.string.Quiet_Room_8_30); // get the room name from res/values/strings.xml
+        Room Qr830 = new Room(Q830); // Create a room object with the name
+        zone8.add(Qr830); // add the room to the list of rooms for zone1
+
+        String Q834 = getString(R.string.Quiet_Room_8_34); // get the room name from res/values/strings.xml
+        Room Qr834 = new Room(Q834); // Create a room object with the name
+        zone8.add(Qr834); // add the room to the list of rooms for zone1
+
+        String Q835 = getString(R.string.Quiet_Room_8_35); // get the room name from res/values/strings.xml
+        Room Qr835 = new Room(Q835); // Create a room object with the name
+        zone8.add(Qr835); // add the room to the list of rooms for zone1
+
+        List<Room> zone9 = new ArrayList<>();
+        String BU = getString(R.string.Buenos_Aires); // get the room name from res/values/strings.xml
+        Room BUA = new Room(BU); // Create a room object with the name
+        zone9.add(BUA); // add the room to the list of rooms for zone1
+
+        String BR = getString(R.string.Brasillia); // get the room name from res/values/strings.xml
+        Room BRA = new Room(BR); // Create a room object with the name
+        zone9.add(BRA); // add the room to the list of rooms for zone1
+
+        String WD = getString(R.string.Washington_DC); // get the room name from res/values/strings.xml
+        Room WDC = new Room(WD); // Create a room object with the name
+        zone9.add(WDC); // add the room to the list of rooms for zone1
+
+        String V = getString(R.string.V_A_Lab); // get the room name from res/values/strings.xml
+        Room VA = new Room(V); // Create a room object with the name
+        zone9.add(VA); // add the room to the list of rooms for zone1
+
+        String Q906 = getString(R.string.Quiet_Room_9_06); // get the room name from res/values/strings.xml
+        Room QR906 = new Room(Q906); // Create a room object with the name
+        zone9.add(QR906); // add the room to the list of rooms for zone1
+
+        String Q917 = getString(R.string.Quiet_Room_9_17); // get the room name from res/values/strings.xml
+        Room QR917 = new Room(Q917); // Create a room object with the name
+        zone9.add(QR917); // add the room to the list of rooms for zone1
+
+        String Q925 = getString(R.string.Quiet_Room_9_25); // get the room name from res/values/strings.xml
+        Room QR925 = new Room(Q925); // Create a room object with the name
+        zone9.add(QR925); // add the room to the list of rooms for zone1
+
+        String Q927 = getString(R.string.Quiet_Room_9_27); // get the room name from res/values/strings.xml
+        Room QR927 = new Room(Q927); // Create a room object with the name
+        zone9.add(QR927); // add the room to the list of rooms for zone1
+
+        String Q939 = getString(R.string.Quiet_Room_9_39); // get the room name from res/values/strings.xml
+        Room QR939 = new Room(Q939); // Create a room object with the name
+        zone9.add(QR939); // add the room to the list of rooms for zone1
+
+        String Q941 = getString(R.string.Quiet_Room_9_41); // get the room name from res/values/strings.xml
+        Room QR941 = new Room(Q941); // Create a room object with the name
+        zone9.add(QR941); // add the room to the list of rooms for zone1
+
+        String Q948 = getString(R.string.Quiet_Room_9_48); // get the room name from res/values/strings.xml
+        Room QR948 = new Room(Q948); // Create a room object with the name
+        zone9.add(QR948); // add the room to the list of rooms for zone1
+
+
 
 
 
 
         listDataChild.put(listDataHeader.get(0), zone1); // Header
-                }
-                }
+        listDataChild.put(listDataHeader.get(1), zone3); // Header
+        listDataChild.put(listDataHeader.get(2), zone4); // Header
+        listDataChild.put(listDataHeader.get(3), zone5); // Header
+        listDataChild.put(listDataHeader.get(4), zone6); // Header
+        listDataChild.put(listDataHeader.get(5), zone7); // Header
+        listDataChild.put(listDataHeader.get(6), zone8); // Header
+        listDataChild.put(listDataHeader.get(7), zone9); // Header
+    }
+}
