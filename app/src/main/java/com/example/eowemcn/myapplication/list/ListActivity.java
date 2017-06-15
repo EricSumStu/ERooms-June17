@@ -93,12 +93,23 @@ public class ListActivity extends Activity {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v,
                                         int groupPosition, int childPosition, long id) {
-                TextView textView = (TextView) parent.findViewById(R.id.lblListItem);
-
-                textView.setTextColor(getResources().getColor(R.color.colorAccent));
+                TextView textViewColor = (TextView) parent.findViewById(R.id.lblListItem);
 
 
- /*               Toast.makeText(
+
+
+                if(!clicked){
+                    textViewColor.setTextColor(getResources().getColor(R.color.drawer_color));
+                    // set the default color
+                    clicked = true;
+                }else{
+                    textViewColor.setTextColor(getResources().getColor(R.color.colorGreen));
+                    //set secondary color
+                    clicked = false;
+                }
+
+
+                Toast.makeText(
                         getApplicationContext(),
                         listDataHeader.get(groupPosition)
                                 + " : "
@@ -106,7 +117,6 @@ public class ListActivity extends Activity {
                                 listDataHeader.get(groupPosition)).get(
                                 childPosition), Toast.LENGTH_SHORT)
                         .show();
-                        */
                 return false;
             }
         });
