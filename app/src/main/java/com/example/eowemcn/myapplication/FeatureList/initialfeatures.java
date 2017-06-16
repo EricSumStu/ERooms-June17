@@ -20,7 +20,7 @@ import java.util.List;
 public class initialfeatures extends Activity {
 
 
-    ExpandableListAdapter listAdapter;
+    ExpandableListAdapter2 listAdapter;
     ExpandableListView expListView;
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
@@ -42,7 +42,7 @@ public class initialfeatures extends Activity {
         // preparing Oldlist data
         prepareListData();
 
-        listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
+        listAdapter = new ExpandableListAdapter2(this, listDataHeader, listDataChild);
 
         // setting Oldlist adapter
         expListView.setAdapter(listAdapter);
