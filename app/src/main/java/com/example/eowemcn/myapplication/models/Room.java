@@ -1,6 +1,10 @@
 package com.example.eowemcn.myapplication.models;
 
-public class Room {
+import android.support.annotation.NonNull;
+
+import java.util.Comparator;
+
+public class Room implements Comparable<Room>{
     private String name;
     private Zone zone;
     private Integer capacity;
@@ -44,4 +48,22 @@ public class Room {
     public String toString() {
         return this.name;
     }
+
+    @Override
+    public int compareTo(@NonNull Room o) {
+        int capacity1 = this.getCapacity();
+        int capacity2 = o.getCapacity();
+
+        if (capacity1 == capacity2) {
+            System.out.println(this.name + " has same capacity as " + o.getName());
+            return 0;
+        } else if (capacity1 > capacity2) {
+            System.out.println(this.name + " has more capacity than " + o.getName());
+            return -1;
+        } else {
+            System.out.println(this.name + " has less capacity than " + o.getName());
+            return 1;
+        }
+    }
+
 }
