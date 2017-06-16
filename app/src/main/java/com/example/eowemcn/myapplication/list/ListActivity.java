@@ -203,9 +203,9 @@ public class ListActivity extends Activity {
         Par.setCapacity(getResources().getInteger(R.integer.Paris));
         zone3.add(Par); // add the room to the list of rooms for zone1
 
-        String At = getString(R.string.Athlone_Conference_Room); // get the room name from res/values/strings.xml
+        String At = getString(R.string.Athlone_Telepresence_Room); // get the room name from res/values/strings.xml
         Room Ath = new Room(At); // Create a room object with the name
-        Ath.setCapacity(getResources().getInteger(R.integer.Athlone_Conference_Room));
+        Ath.setCapacity(getResources().getInteger(R.integer.Athlone_Telepresence_Room));
         zone3.add(Ath); // add the room to the list of rooms for zone1
 
         String Q336 = getString(R.string.Quiet_Room_3_36); // get the room name from res/values/strings.xml
@@ -249,7 +249,7 @@ public class ListActivity extends Activity {
 
         String Q427 = getString(R.string.Quiet_Room_4_27); // get the room name from res/values/strings.xml
         Room Qr427 = new Room(Q427); // Create a room object with the name
-        Qr427.setCapacity(getResources().getInteger(R.integer.Quiet_Room_4_27));;
+        Qr427.setCapacity(getResources().getInteger(R.integer.Quiet_Room_4_27));
         zone4.add(Qr427); // add the room to the list of rooms for zone1
 
         String Q445 = getString(R.string.Quiet_Room_4_45); // get the room name from res/values/strings.xml

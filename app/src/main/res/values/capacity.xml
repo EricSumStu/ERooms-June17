@@ -10,10 +10,8 @@
     <integer name="Quiet_Room_1.28">4</integer>
     <integer name="Quiet_Room_1.29">4</integer>
 
-
-
     <integer name="Paris">12</integer>
-    <integer name="Athlone_Conference_Room">20</integer>
+    <integer name="Athlone_Telepresence_Room">20</integer>
     <integer name="Quiet_Room_3.36">3</integer>
     <integer name="Quiet_Room_3.44">3</integer>
     <integer name="Quiet_Room_3.45">3</integer>
