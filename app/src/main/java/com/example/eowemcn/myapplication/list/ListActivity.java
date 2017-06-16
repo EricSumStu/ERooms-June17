@@ -9,11 +9,9 @@ import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.ExpandableListView.OnGroupClickListener;
 import android.widget.ExpandableListView.OnGroupCollapseListener;
 import android.widget.ExpandableListView.OnGroupExpandListener;
-import android.widget.HeaderViewListAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.eowemcn.myapplication.ExpandableListAdapter;
 import com.example.eowemcn.myapplication.R;
 import com.example.eowemcn.myapplication.models.Room;
 
