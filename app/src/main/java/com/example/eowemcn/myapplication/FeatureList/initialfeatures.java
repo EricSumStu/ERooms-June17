@@ -112,116 +112,202 @@ public class initialfeatures extends Activity {
         listDataChild = new HashMap<>();
 
         // Adding child data
-        listDataHeader.add("Zone 1");
-        listDataHeader.add("Zone 3");
-        listDataHeader.add("Zone 4");
-        listDataHeader.add("Zone 5");
-        listDataHeader.add("Zone 6");
-        listDataHeader.add("Zone 7");
-        listDataHeader.add("Zone 8");
-        listDataHeader.add("Zone 9");
-
+        listDataHeader.add("Lars Magnus");
+        listDataHeader.add("Reykjavik");
+        listDataHeader.add("Nuuk");
+        listDataHeader.add("Paris");
+        listDataHeader.add("Athlone Tele Prescence");
+        listDataHeader.add("Demo Room");
+        listDataHeader.add("Kuala Lumpur");
+        listDataHeader.add("Stockholm");
+        listDataHeader.add("Berlin");
+        listDataHeader.add("Helsinki");
+        listDataHeader.add("Rome");
+        listDataHeader.add("Wellington");
+        listDataHeader.add("Canberra");
+        listDataHeader.add("Tokyo");
+        listDataHeader.add("Warsaw");
+        listDataHeader.add("Kiev");
+        listDataHeader.add("Moscow");
+        listDataHeader.add("Cape Town");
+        listDataHeader.add("Jakarta");
+        listDataHeader.add("Honolulu");
+        listDataHeader.add("Ottowa");
+        listDataHeader.add("Anchorage");
+        listDataHeader.add("Buenos Aires");
+        listDataHeader.add("Brasilia");
+        listDataHeader.add("Washington");
+        listDataHeader.add("V.A Lab");
 
         // Adding child data
-        List<String> zone1 = new ArrayList<>();
-        zone1.add("Lars Magnus");
-        zone1.add("Reykjavik");
-        zone1.add("Nuuk");
-        zone1.add("Quiet Room 1-16");
-        zone1.add("Quiet Room 1-17");
-        zone1.add("Quiet Room 1-20");
-        zone1.add("Quiet Room 1-21");
-        zone1.add("Quiet Room 1-28");
-        zone1.add("Quiet Room 1-29");
+        List<String> lars_magnus = new ArrayList<>();
+        lars_magnus.add("4 T.V's");
+        lars_magnus.add("4 Whiteboards");
+        lars_magnus.add("1 Projector");
+        lars_magnus.add("Capacity:28");
+
+        List<String> reykjavik = new ArrayList<>();
+        reykjavik.add("2 T.V's");
+        reykjavik.add("2 Whiteboards");
+        reykjavik.add("1 Projector");
+        reykjavik.add("Capacity:10");
+
+        List<String> nuuk = new  ArrayList<>();
+        nuuk.add("2 Whiteboards");
+        nuuk.add("1 Projector");
+        nuuk.add("8 Desks");
+        nuuk.add("1 Table");
+
+        List<String> paris = new  ArrayList<>();
+        paris.add("1 Whiteboard");
+        paris.add("1 T.V");
+
+        List<String> athloneteleprescence =  new  ArrayList<>();
+        athloneteleprescence.add("");
+        athloneteleprescence.add("");
+        athloneteleprescence.add("");
+
+        List<String> demoroom =  new ArrayList<>();
+        demoroom.add("");
+        demoroom.add("");
+        demoroom.add("");
+        demoroom.add("");
+        demoroom.add("");
 
 
-        List<String> zone3 = new ArrayList<>();
-        zone3.add("Paris");
-        zone3.add("Athlone- Conference Room");
-        zone3.add("Quiet Room 3-36");
-        zone3.add("Quiet Room 3-44");
-        zone3.add("Quiet Room 3-45");
+        List<String> kuala_lumpur = new  ArrayList<>();
+        kuala_lumpur.add("1 Whiteboard");
+        kuala_lumpur.add("1 T.V");
+        kuala_lumpur.add("");
 
+        List<String> stockholm = new  ArrayList<>();
+        stockholm.add("1 Whiteboard");
+        stockholm.add("1 T.V");
+        stockholm.add("Camera");
+        stockholm.add("");
 
-        List<String> zone4 = new  ArrayList<>();
-        zone4.add("Demo Room");
-        zone4.add("Kuala Lumpur");
-        zone4.add("Quiet Room 4-01");
-        zone4.add("Quiet Room 4-02");
-        zone4.add("Quiet Room 4-27");
-        zone4.add("Quiet Room 4-45");
-        zone4.add("Quiet Room 4-55");
-        zone4.add("Quiet Room 4-56");
-        zone4.add("Quiet Room 4-57");
+        List<String> berlin = new ArrayList<>();
+        berlin.add("");
+        berlin.add("");
+        berlin.add("");
+        berlin.add("");
+        berlin.add("");
 
-        List<String> zone5 = new  ArrayList<>();
-        zone5.add("Stockholm");
-        zone5.add("Berlin");
-        zone5.add("Helsinki");
-        zone5.add("Rome");
-        zone5.add("Quiet Room 5-04");
-        zone5.add("Quiet Room 5-10");
+        List<String> helsinki = new ArrayList<>();
+        helsinki.add("1 Whiteboard");
+        helsinki.add("1 T.V");
+        helsinki.add("");
 
-        List<String> zone6 =  new  ArrayList<>();
-        zone6.add("Wellington");
-        zone6.add("Canberra");
-        zone6.add("Tokyo");
-        zone6.add("Warsaw");
-        zone6.add("Kiev");
-        zone6.add("Moscow");
-        zone6.add("Quiet Room 6-01");
-        zone6.add("Quiet Room 6-15");
-        zone6.add("Quiet Room 6-16");
-        zone6.add("Quiet Room 6-29");
-        zone6.add("Quiet Room 6-30");
-        zone6.add("Quiet Room 6-36");
+        List<String> rome = new ArrayList<>();
+        rome.add("1 Whiteboard");
+        rome.add("1 T.V");
+        rome.add("");
 
+        List<String> wellington = new ArrayList<>();
+        wellington.add("1 Whiteboard");
+        wellington.add("1 T.V");
+        wellington.add("Capacity:10");
 
-        List<String> zone7 =  new ArrayList<>();
-        zone7.add("Cape Town");
-        zone7.add("Jakarta");
-        zone7.add("Quiet Room 7-08");
-        zone7.add("Quiet Room 7-09");
-        zone7.add("Quiet Room 7-11");
-        zone7.add("Quiet Room 7-14");
-        zone7.add("Quiet Room 7-19");
-        zone7.add("Quiet Room 7-20");
+        List<String> canberra = new ArrayList<>();
+        canberra.add("1 Whiteboard");
+        canberra.add("1 T.V");
+        canberra.add("Capacity:10");
 
-        List<String> zone8 = new  ArrayList<>();
-        zone8.add("Honolulu");
-        zone8.add("Ottowa");
-        zone8.add("Anchorage");
-        zone8.add("Quiet Room 8-12");
-        zone8.add("Quiet Room 8-18");
-        zone8.add("Quiet Room 8-23");
-        zone8.add("Quiet Room 8-28");
-        zone8.add("Quiet Room 8-29");
-        zone8.add("Quiet Room 8-30");
-        zone8.add("Quiet Room 8-34");
-        zone8.add("Quiet Room 8-35");
+        List<String> tokyo = new ArrayList<>();
+        tokyo.add("1 Whiteboard");
+        tokyo.add("2 T.V's");
+        tokyo.add("Speakers");
+        tokyo.add("Camera");
+        tokyo.add("");
 
-        List<String> zone9 = new  ArrayList<>();
-        zone9.add("Buenos Aires");
-        zone9.add("Brasilla");
-        zone9.add("Washington DC");
-        zone9.add("V.A Lab");
-        zone9.add("Quiet Room 9-06");
-        zone9.add("Quiet Room 9-17");
-        zone9.add("Quiet Room 9-25");
-        zone9.add("Quiet Room 9-27");
-        zone9.add("Quiet Room 9-39");
-        zone9.add("Quiet Room 9-41");
-        zone9.add("Quiet Room 9-48");
+        List<String> warsaw = new ArrayList<>();
+        warsaw.add("1 Whiteboard");
+        warsaw.add("1 T.V");
+        warsaw.add("Capacity:10");
 
+          List<String> kiev = new ArrayList<>();
+        kiev.add("3 Whiteboards");
+        kiev.add("1 T.V");
+        kiev.add("Capacity:10");
 
-        listDataChild.put(listDataHeader.get(0), zone1); // Header,
-        listDataChild.put(listDataHeader.get(1), zone3);
-        listDataChild.put(listDataHeader.get(2), zone4);
-        listDataChild.put(listDataHeader.get(3), zone5);
-        listDataChild.put(listDataHeader.get(4), zone6);
-        listDataChild.put(listDataHeader.get(5), zone7);
-        listDataChild.put(listDataHeader.get(6), zone8);
-        listDataChild.put(listDataHeader.get(7), zone9);
+        List<String> moscow = new ArrayList<>();
+        moscow.add("1 Whiteboard");
+        moscow.add("1 T.V");
+        moscow.add("Capacity:9");
 
+        List<String> cape_town = new ArrayList<>();
+        cape_town.add("1 Whiteboard");
+        cape_town.add("1 T.V");
+        cape_town.add("Capacity:13");
+
+        List<String> jakarta = new ArrayList<>();
+        jakarta.add("2 Whiteboards");
+        jakarta.add("1 T.V");
+        jakarta.add("");
+
+        List<String> honolulu = new ArrayList<>();
+        honolulu.add("2 Whiteboards");
+        honolulu.add("1 T.V");
+        honolulu.add("1 Flipboard");
+        honolulu.add("Capacity:9");
+
+        List<String> ottowa = new ArrayList<>();
+        ottowa.add("1 Whiteboard");
+        ottowa.add("1 T.v");
+        ottowa.add("Capacity:11");
+
+        List<String> anchorage = new ArrayList<>();
+        anchorage.add("1 Whiteboard");
+        anchorage.add("3 T.V's");
+        anchorage.add("1 Flipboard");
+        anchorage.add("Camera");
+        anchorage.add("Tablet");
+        anchorage.add("Capacity:11+");
+
+        List<String> buenos_aires = new ArrayList<>();
+        buenos_aires.add("1 Whiteboard");
+        buenos_aires.add("1 T.V");
+        buenos_aires.add("Capacity:9");
+
+        List<String> brasilla = new ArrayList<>();
+        brasilla.add("1 Whiteboard");
+        brasilla.add("1 T.V");
+        brasilla.add("");
+
+        List<String> washington_d_c = new ArrayList<>();
+        washington_d_c.add("1 Whiteboard");
+        washington_d_c.add("1 T.V");
+        washington_d_c.add("Capacity:10");
+
+        List<String> v_a_lab = new ArrayList<>();
+        v_a_lab.add("3 Whiteboards");
+        v_a_lab.add("1 Projector");
+        v_a_lab.add("6 Computer Screens");
+        v_a_lab.add("Capacity:11");
+
+        listDataChild.put(listDataHeader.get(0), lars_magnus); // Header,
+        listDataChild.put(listDataHeader.get(1), reykjavik);
+        listDataChild.put(listDataHeader.get(2), nuuk);
+        listDataChild.put(listDataHeader.get(3), paris);
+        listDataChild.put(listDataHeader.get(4), athloneteleprescence);
+        listDataChild.put(listDataHeader.get(5), demoroom);
+        listDataChild.put(listDataHeader.get(6), kuala_lumpur);
+        listDataChild.put(listDataHeader.get(7), stockholm);
+        listDataChild.put(listDataHeader.get(8), helsinki);
+        listDataChild.put(listDataHeader.get(9), rome);
+        listDataChild.put(listDataHeader.get(10), wellington);
+        listDataChild.put(listDataHeader.get(11), canberra);
+        listDataChild.put(listDataHeader.get(12), tokyo);
+        listDataChild.put(listDataHeader.get(13), warsaw);
+        listDataChild.put(listDataHeader.get(14), kiev);
+        listDataChild.put(listDataHeader.get(15), moscow);
+        listDataChild.put(listDataHeader.get(16), cape_town);
+        listDataChild.put(listDataHeader.get(17), jakarta);
+        listDataChild.put(listDataHeader.get(18), honolulu);
+        listDataChild.put(listDataHeader.get(19), ottowa);
+        listDataChild.put(listDataHeader.get(20), anchorage);
+        listDataChild.put(listDataHeader.get(21), buenos_aires);
+        listDataChild.put(listDataHeader.get(22), washington_d_c);
+        listDataChild.put(listDataHeader.get(23), v_a_lab);
     }
 }
