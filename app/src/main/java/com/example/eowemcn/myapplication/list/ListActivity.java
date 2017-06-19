@@ -36,9 +36,9 @@ public class ListActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list);
 
-        Typeface myTypeFace4 = Typeface.createFromAsset(getAssets(), "abc.ttf");
-        TextView myTextView4 = (TextView) findViewById(R.id.textview4);
-        myTextView4.setTypeface(myTypeFace4);
+        /*Typeface myTypeFace4 = Typeface.createFromAsset(getAssets(), "abc.ttf");
+        TextView myTextView4 = (TextView) findViewById(R.id.searchview1);
+        myTextView4.setTypeface(myTypeFace4);*/
 
         final TextView textviewclick = (TextView) findViewById(R.id.lblListItem);
 
@@ -162,7 +162,7 @@ public class ListActivity extends Activity {
         nuuk.setCapacity(getResources().getInteger(R.integer.Nuuk));
         zone1.add(nuuk); // add the room to the list of rooms for zone1
 
-       String q1 = getString(R.string.Quiet_Room_1_16); // get the room name from res/values/strings.xml
+        String q1 = getString(R.string.Quiet_Room_1_16); // get the room name from res/values/strings.xml
         Room qu1 = new Room(q1); // Create a room object with the name
         qu1.setCapacity(getResources().getInteger(R.integer.Quiet_Room_1_16));
         zone1.add(qu1); // add the room to the list of rooms for zone1
