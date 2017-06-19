@@ -17,7 +17,14 @@ public enum Zone {
         this.zone = zone;
     }
 
-    public int getRank() {
+    public int getIntValue() {
         return zone;
+    }
+
+    public static Zone getZone(int zoneIndex) {
+        for (Zone l : Zone.values()) {
+            if (l.getIntValue() == zoneIndex) return l;
+        }
+        throw new IllegalArgumentException("Zone not found.");
     }
 }
