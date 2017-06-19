@@ -2,10 +2,11 @@ package com.example.eowemcn.myapplication.models;
 
 import android.support.annotation.NonNull;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Room implements Comparable<Room>{
+public class Room implements Comparable<Room>, Serializable{
     private String name;
     private Zone zone;
     private Integer capacity;
