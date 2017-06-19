@@ -19,6 +19,13 @@ public enum Feature {
     public String toString() {
         return featureName;
     }
+
+    public static Feature getFeature(String feature) {
+        for (Feature f : Feature.values()) {
+            if (f.toString().equals(feature)) return f;
+        }
+        throw new IllegalArgumentException("Feature not found.");
+    }
 }
 
 
