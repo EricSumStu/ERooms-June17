@@ -2,13 +2,15 @@ package com.example.eowemcn.myapplication.models;
 
 import android.support.annotation.NonNull;
 
-import java.util.Comparator;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Room implements Comparable<Room>{
     private String name;
     private Zone zone;
     private Integer capacity;
     private boolean availability;
+    private List<Feature> features = new ArrayList<>();
 
     public Room(String name){
         this.name = name;
@@ -44,10 +46,20 @@ public class Room implements Comparable<Room>{
         this.capacity = capacity;
     }
 
-
     public String toString() {
         return this.name;
     }
+
+
+    public void addFeature(Feature f){
+        features.add(f);
+    }
+
+    public List<Feature> getFeatures(){
+        return features;
+    }
+
+
 
     @Override
     public int compareTo(@NonNull Room o) {
