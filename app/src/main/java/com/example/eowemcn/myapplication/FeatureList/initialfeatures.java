@@ -28,16 +28,16 @@ public class initialfeatures extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.list);
+        setContentView(R.layout.features);
 
         Typeface myTypeFace4 = Typeface.createFromAsset(getAssets(), "abc.ttf");
-        TextView myTextView4 = (TextView) findViewById(R.id.textview4);
+        TextView myTextView4 = (TextView) findViewById(R.id.textviewf);
         myTextView4.setTypeface(myTypeFace4);
 
 
 
         // get the listview
-        expListView = (ExpandableListView) findViewById(R.id.lvExp);
+        expListView = (ExpandableListView) findViewById(R.id.fExp);
 
         // preparing Oldlist data
         prepareListData();
