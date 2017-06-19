@@ -1,0 +1,586 @@
+{
+  "rooms": [
+    {
+      "name": "Lars Magnus",
+      "capacity": 40,
+      "type": "Meeting Room",
+      "zone": 1,
+      "available": false,
+      "features": [
+        {"type": "Television", "number": 4},
+        {"type": "Whiteboard", "number": 4},
+        {"type": "Projector", "number": 1}
+      ]
+    },
+    {
+      "name": "Reykjavik",
+      "capacity": 12,
+      "type": "Meeting Room",
+      "zone": 1,
+      "available": true,
+      "features": [
+        {"type": "Television", "number": 2},
+        {"type": "Whiteboard", "number": 2},
+        {"type": "Projector", "number": 1}
+      ]
+    },
+    {
+      "name": "Nuuk",
+      "capacity": 12,
+      "type": "Meeting Room",
+      "zone": 1,
+      "available": true,
+      "features": [
+        {"type": "Whiteboard", "number": 2},
+        {"type": "Projector", "number": 1}
+      ]
+    },
+    {
+      "name": "Quiet Room 1.16",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 1,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 1.17",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 1,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 1.20",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 1,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 1.21",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 1,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 1.28",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 1,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 1.29",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 1,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Paris",
+      "capacity": 12,
+      "type": "Meeting Room",
+      "zone": 3,
+      "available": true,
+      "features": [
+        {"type": "Whiteboard", "number": 1},
+        {"type": "Television", "number": 1}
+      ]
+    },
+    {
+      "name": "Athlone Conference Room",
+      "capacity": 20,
+      "type": "Telepresence Room",
+      "zone": 3,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 3.36",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 3,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 3.44",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 3,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 3.45",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 3,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Demo Room",
+      "capacity": 25,
+      "type": "Meeting Room",
+      "zone": 4,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Kuala Lumpur",
+      "capacity": 12,
+      "type": "Meeting Room",
+      "zone": 4,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 4.01",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 4,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 4.02",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 4,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 4.27",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 4,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 4.45",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 4,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 4.55",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 4,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 4.56",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 4,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 4.57",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 4,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Stockholm",
+      "capacity": 12,
+      "type": "Meeting Room",
+      "zone": 5,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Berlin",
+      "capacity": 12,
+      "type": "Meeting Room",
+      "zone": 5,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Helsinki",
+      "capacity": 12,
+      "type": "Meeting Room",
+      "zone": 5,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Rome",
+      "capacity": 12,
+      "type": "Meeting Room",
+      "zone": 5,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 5.04",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 5,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 5.10",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 5,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Wellington",
+      "capacity": 12,
+      "type": "Meeting Room",
+      "zone": 6,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Canberra",
+      "capacity": 12,
+      "type": "Meeting Room",
+      "zone": 6,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Tokyo",
+      "capacity": 12,
+      "type": "Meeting Room",
+      "zone": 6,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Warsaw",
+      "capacity": 12,
+      "type": "Meeting Room",
+      "zone": 6,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Kiev",
+      "capacity": 12,
+      "type": "Meeting Room",
+      "zone": 6,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Moscow",
+      "capacity": 12,
+      "type": "Meeting Room",
+      "zone": 6,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 6.01",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 6,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 6.15",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 6,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 6.16",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 6,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 6.29",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 6,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 6.30",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 6,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 6.36",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 6,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Cape Town",
+      "capacity": 12,
+      "type": "Meeting Room",
+      "zone": 6,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Jakarta",
+      "capacity": 12,
+      "type": "Meeting Room",
+      "zone": 6,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 7.08",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 7,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 7.09",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 7,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 7.11",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 7,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 7.14",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 7,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 7.19",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 7,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 7.20",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 7,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Honolulu",
+      "capacity": 12,
+      "type": "Meeting Room",
+      "zone": 8,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Ottowa",
+      "capacity": 12,
+      "type": "Meeting Room",
+      "zone": 8,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Anchorage",
+      "capacity": 12,
+      "type": "Meeting Room",
+      "zone": 8,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 8.12",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 8,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 8.18",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 8,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 8.23",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 8,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 8.28",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 8,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 8.29",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 8,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 8.30",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 8,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 8.34",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 8,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 8.35",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 8,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Buenos Aires",
+      "capacity": 10,
+      "type": "Meeting Room",
+      "zone": 9,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Brasilia",
+      "capacity": 10,
+      "type": "Meeting Room",
+      "zone": 9,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Washington DC",
+      "capacity": 20,
+      "type": "Meeting Room",
+      "zone": 9,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "VA Lab",
+      "capacity": 4,
+      "type": "Meeting Room",
+      "zone": 9,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 9.06",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 9,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 9.17",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 9,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 9.25",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 9,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 9.27",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 9,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 9.39",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 9,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 9.41",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 9,
+      "available": true,
+      "features": []
+    },
+    {
+      "name": "Quiet Room 9.48",
+      "capacity": 4,
+      "type": "Quiet Room",
+      "zone": 9,
+      "available": true,
+      "features": []
+    }
+  ]
+}
