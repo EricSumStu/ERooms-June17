@@ -9,12 +9,20 @@ import java.util.List;
 public class Room implements Comparable<Room>, Serializable{
     private String name;
     private Zone zone;
-    private Integer capacity;
+    private int capacity;
     private boolean availability;
     private List<Feature> features = new ArrayList<>();
 
     public Room(String name){
         this.name = name;
+    }
+
+    public Room(String name, Zone zone, int capacity, boolean availability, List<Feature> features){
+        this.name = name;
+        this.zone = zone;
+        this.capacity = capacity;
+        this.availability = availability;
+        this.features = features;
     }
 
     public String getName(){
@@ -41,9 +49,9 @@ public class Room implements Comparable<Room>, Serializable{
         this.zone = zone;
     }
 
-    public Integer  getCapacity() { return this.capacity; }
+    public int  getCapacity() { return this.capacity; }
 
-    public void setCapacity(Integer capacity) {
+    public void setCapacity(int capacity) {
         this.capacity = capacity;
     }
 

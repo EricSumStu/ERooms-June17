@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -13,7 +14,20 @@ import com.example.eowemcn.myapplication.FeatureList.initialfeatures;
 import com.example.eowemcn.myapplication.list.ListActivity;
 import com.example.eowemcn.myapplication.map.Maps;
 import com.example.eowemcn.myapplication.models.Room;
+import com.example.eowemcn.myapplication.models.Zone;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.io.StringWriter;
+import java.io.UnsupportedEncodingException;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -82,7 +96,19 @@ public class initialui extends Activity {
     protected void onCreate(Bundle savedInstancesState) {
         super.onCreate(savedInstancesState);
         setContentView(R.layout.initialui);
+
+        // Get the Room Data
         prepareListData();
+
+        try {
+            JSONObject jObject = readJsonFileToObject(R.raw.rooms);
+            convertJsonToRooms(jObject);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
         Typeface myTypeFace1 = Typeface.createFromAsset(getAssets(), "abc.ttf");
         TextView myTextView1 = (TextView) findViewById(R.id.textview1);
         myTextView1.setTypeface(myTypeFace1);
@@ -100,12 +126,61 @@ public class initialui extends Activity {
         init();
         init2();
         init3();
+    }
 
+    private JSONObject readJsonFileToObject(int resource) throws IOException, JSONException {
+        InputStream is = getResources().openRawResource(resource); // Open input stream to hold data
+        Writer writer = new StringWriter(); // Create a new String Writer to hold new String
+        char[] buffer = new char[1024]; // Set a buffer 1024 chars
+        try {
+            // Read in the file using an input stream
+            Reader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
+            int n;
+            while ((n = reader.read(buffer)) != -1) {
+                // Write the data read in to our String buffer
+                writer.write(buffer, 0, n);
+            }
+        }catch(UnsupportedEncodingException e){
+
+        } finally {
+            is.close(); // Close input stream
+        }
+
+        // Get the final String from the StringWriter
+        String rawString = writer.toString();
+
+        // Parse raw String to JSON
+        JSONObject jObject = new JSONObject(rawString);
+
+        return jObject;
+    }
+
+    private List<Room> convertJsonToRooms(JSONObject jObject) throws JSONException {
+        // Create a new list of Rooms (to fill)
+        List<Room> rooms = new ArrayList<>();
+        // Get rooms array from file
+        JSONArray jsonRooms = jObject.getJSONArray("rooms");
+
+        // Go through all the rooms in the JSONArray
+        for (int i=0; i < jsonRooms.length(); i++) {
+            // Get the Individual JSON room
+            JSONObject jsonRoom = jsonRooms.getJSONObject(i);
+            Log.d("JSON Processing", "Processing room: " + jsonRoom.getString("name"));
+
+            String name = jsonRoom.getString("name"); // Get the room name
+            // TODO: Get all the values from the JSON Object & add it to Room Object
+            Room room = new Room(name); // Create a new Room
+            rooms.add(room);
+        }
+
+
+        // return the rooms back
+        return rooms;
     }
 
     /*
- * Preparing the Oldlist data
- */
+     * Preparing the Oldlist data
+     */
     private void prepareListData() {
         listDataHeader = new ArrayList<>();
         listDataChild = new HashMap<>();
