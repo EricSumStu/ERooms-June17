@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.eowemcn.myapplication.list.ListActivity">
+        <activity android:name="com.example.eowemcn.myapplication.list.zones.ZoneListActivity">
             <intent-filter>
                 <action android:name="screen.list" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -25,8 +25,12 @@
         </activity>
         <activity android:name=".map.Maps">
         </activity>
+<<<<<<< HEAD
         <activity android:name=".FeatureList.initialfeatures"></activity>
         <activity android:name=".free_rooms.freerooms"></activity>
+=======
+        <activity android:name=".list.features.FeatureListActivity"></activity>
+>>>>>>> f26301e11240afbc91fd342c75a15c98d1344962
     </application>
 
 </manifest>
