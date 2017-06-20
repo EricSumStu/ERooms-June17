@@ -1,11 +1,11 @@
-package com.example.eowemcn.myapplication.free_rooms;
+package com.example.eowemcn.myapplication.list.availability;
 
 import android.app.Activity;
 import android.os.Bundle;
 
 import com.example.eowemcn.myapplication.R;
 
-public class freerooms extends Activity {
+public class FreeRoomActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -9,11 +9,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.eowemcn.myapplication.featureslist.FeatureListActivity;
-import com.example.eowemcn.myapplication.free_rooms.freerooms;
+import com.example.eowemcn.myapplication.list.features.FeatureListActivity;
+import com.example.eowemcn.myapplication.list.availability.FreeRoomActivity;
 import com.example.eowemcn.myapplication.json.JsonToRoomsConverter;
 import com.example.eowemcn.myapplication.json.ReadFileToJSON;
-import com.example.eowemcn.myapplication.zonelist.ZoneListActivity;
+import com.example.eowemcn.myapplication.list.zone.ZoneListActivity;
 import com.example.eowemcn.myapplication.map.Maps;
 import com.example.eowemcn.myapplication.models.Feature;
 import com.example.eowemcn.myapplication.models.Room;
@@ -41,7 +41,7 @@ public class initialui extends Activity {
         textview4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent newscreen4 = new Intent(initialui.this, freerooms.class);
+                Intent newscreen4 = new Intent(initialui.this, FreeRoomActivity.class);
 
                 startActivity(newscreen4);
             }

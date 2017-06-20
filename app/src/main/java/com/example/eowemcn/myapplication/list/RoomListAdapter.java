@@ -1,4 +1,4 @@
-package com.example.eowemcn.myapplication.featureslist;
+package com.example.eowemcn.myapplication.list;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -9,28 +9,29 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
 import com.example.eowemcn.myapplication.R;
+import com.example.eowemcn.myapplication.models.Room;
 
 import java.util.HashMap;
 import java.util.List;
 
-public class FeatureAdapter extends BaseExpandableListAdapter {
+public class RoomListAdapter extends BaseExpandableListAdapter {
 
     private Context _context;
     private List<String> _listDataHeader; // header titles
     // child data in format of header title, child title
-    private HashMap<String, List<String>> _listDataChild;
+    private HashMap<String, List<Room>> _listDataChild;
 
-    public FeatureAdapter(Context context, List<String> listDataHeader,
-                                  HashMap<String, List<String>> listChildData) {
+    public RoomListAdapter(Context context, List<String> listDataHeader,
+                           HashMap<String, List<Room>> listChildData) {
         this._context = context;
         this._listDataHeader = listDataHeader;
         this._listDataChild = listChildData;
     }
 
     @Override
-    public Object getChild(int groupPosition, int childPosititon) {
+    public Object getChild(int groupPosition, int childPosition) {
         return this._listDataChild.get(this._listDataHeader.get(groupPosition))
-                .get(childPosititon);
+                .get(childPosition);
     }
 
     @Override
@@ -42,16 +43,16 @@ public class FeatureAdapter extends BaseExpandableListAdapter {
     public View getChildView(int groupPosition, final int childPosition,
                              boolean isLastChild, View convertView, ViewGroup parent) {
 
-        final String childText = (String) getChild(groupPosition, childPosition);
+        final String childText = (String) getChild(groupPosition, childPosition).toString();
 
         if (convertView == null) {
             LayoutInflater infalInflater = (LayoutInflater) this._context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = infalInflater.inflate(R.layout.features_item, null);
+            convertView = infalInflater.inflate(R.layout.list_item, null);
         }
 
         TextView txtListChild = (TextView) convertView
-                .findViewById(R.id.fListItem);
+                .findViewById(R.id.lblListItem);
 
         txtListChild.setText(childText);
         return convertView;
@@ -85,13 +86,13 @@ public class FeatureAdapter extends BaseExpandableListAdapter {
         if (convertView == null) {
             LayoutInflater infalInflater = (LayoutInflater) this._context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = infalInflater.inflate(R.layout.features_group, null);
+            convertView = infalInflater.inflate(R.layout.list_group, null);
         }
 
-        TextView fListHeader = (TextView) convertView
-                .findViewById(R.id.fListHeader);
-        fListHeader.setTypeface(null, Typeface.BOLD);
-        fListHeader.setText(headerTitle);
+        TextView lblListHeader = (TextView) convertView
+                .findViewById(R.id.lblListHeader);
+        lblListHeader.setTypeface(null, Typeface.BOLD);
+        lblListHeader.setText(headerTitle);
 
         return convertView;
     }
