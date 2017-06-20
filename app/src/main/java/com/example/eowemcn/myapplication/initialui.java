@@ -11,10 +11,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.eowemcn.myapplication.FeatureList.initialfeatures;
+import com.example.eowemcn.myapplication.free_rooms.freerooms;
 import com.example.eowemcn.myapplication.list.ListActivity;
 import com.example.eowemcn.myapplication.map.Maps;
+import com.example.eowemcn.myapplication.models.Feature;
 import com.example.eowemcn.myapplication.models.Room;
-import com.example.eowemcn.myapplication.models.Zone;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -38,8 +39,19 @@ public class initialui extends Activity {
     public Button textview2;
     ArrayList<String> listDataHeader;
     HashMap<String, List<Room>> listDataChild;
+    public Button textview4;
 
+    public void init4() {
+        textview4 = (Button) findViewById(R.id.textview4);
+        textview4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent newscreen4 = new Intent(initialui.this, freerooms.class);
 
+                startActivity(newscreen4);
+            }
+        });
+    }
     public void init2() {
         textview2 = (Button) findViewById(R.id.textview2);
         textview2.setOnClickListener(new View.OnClickListener() {
@@ -64,6 +76,7 @@ public class initialui extends Activity {
 
                 newscreen.putExtra("header",  listDataHeader);
                 newscreen.putExtra("children", listDataChild);
+
                 startActivity(newscreen);
 
             }
@@ -126,6 +139,7 @@ public class initialui extends Activity {
         init();
         init2();
         init3();
+        init4();
     }
 
     private JSONObject readJsonFileToObject(int resource) throws IOException, JSONException {
@@ -201,17 +215,28 @@ public class initialui extends Activity {
         String larsName = getString(R.string.LarsMagnus); // get the room name from res/values/strings.xml
         Room lars = new Room(larsName); // Create a room object with the name
         lars.setCapacity(getResources().getInteger(R.integer.Lars_Magnus));
+        lars.addFeature(Feature.TV);
+        lars.addFeature(Feature.Projector);
+        lars.addFeature(Feature.WB);
         zone1.add(lars); // add the room to the list of rooms for zone1
 
         // add another room
         String rey = getString(R.string.Reykjavik); // get the room name from res/values/strings.xml
         Room reyk = new Room(rey); // Create a room object with the name
-        reyk.setCapacity(getResources().getInteger(R.integer.Reykjavik));
+        reyk.addFeature(Feature.TV);
+        reyk.addFeature(Feature.Projector);
+        reyk.addFeature(Feature.WB);
+        reyk.setCapacity(getResources().getInteger(R.integer.Meeting_Room));
+
         zone1.add(reyk); // add the room to the list of rooms for zone1
 
         String nuu = getString(R.string.Nuuk); // get the room name from res/values/strings.xml
         Room nuuk = new Room(nuu); // Create a room object with the name
-        nuuk.setCapacity(getResources().getInteger(R.integer.Nuuk));
+        nuuk.addFeature(Feature.TV);
+        nuuk.addFeature(Feature.Projector);
+        nuuk.addFeature(Feature.WB);
+        nuuk.setCapacity(getResources().getInteger(R.integer.Meeting_Room));
+
         zone1.add(nuuk); // add the room to the list of rooms for zone1
 
         String q1 = getString(R.string.Quiet_Room_1_16); // get the room name from res/values/strings.xml
@@ -250,7 +275,8 @@ public class initialui extends Activity {
         List<Room> zone3 = new ArrayList<>();
         String Pa = getString(R.string.Paris); // get the room name from res/values/strings.xml
         Room Par = new Room(Pa); // Create a room object with the name
-        Par.setCapacity(getResources().getInteger(R.integer.Paris));
+        
+        Par.setCapacity(getResources().getInteger(R.integer.Meeting_Room));
         zone3.add(Par); // add the room to the list of rooms for zone1
 
         String At = getString(R.string.Athlone_Telepresence_Room); // get the room name from res/values/strings.xml
@@ -284,7 +310,7 @@ public class initialui extends Activity {
 
         String Ku = getString(R.string.Kuala_Lumpur); // get the room name from res/values/strings.xml
         Room Kua = new Room(Ku); // Create a room object with the name
-        Kua.setCapacity(getResources().getInteger(R.integer.Kuala_Lumpur));
+        Kua.setCapacity(getResources().getInteger(R.integer.Meeting_Room));
         zone4.add(Kua); // add the room to the list of rooms for zone1
 
         String Q401 = getString(R.string.Quiet_Room_4_01); // get the room name from res/values/strings.xml
@@ -328,22 +354,22 @@ public class initialui extends Activity {
         List<Room> zone5 = new ArrayList<>();
         String S = getString(R.string.Stockholm); // get the room name from res/values/strings.xml
         Room St = new Room(S); // Create a room object with the name
-        St.setCapacity(getResources().getInteger(R.integer.Stockholm));
+        St.setCapacity(getResources().getInteger(R.integer.Meeting_Room));
         zone5.add(St); // add the room to the list of rooms for zone1
 
         String B = getString(R.string.Berlin); // get the room name from res/values/strings.xml
         Room Be = new Room(B); // Create a room object with the name
-        Be.setCapacity(getResources().getInteger(R.integer.Berlin));
+        Be.setCapacity(getResources().getInteger(R.integer.Meeting_Room));
         zone5.add(Be); // add the room to the list of rooms for zone1
 
         String H = getString(R.string.Helsinki); // get the room name from res/values/strings.xml
         Room He = new Room(H); // Create a room object with the name
-        He.setCapacity(getResources().getInteger(R.integer.Helsinki));
+        He.setCapacity(getResources().getInteger(R.integer.Meeting_Room));
         zone5.add(He); // add the room to the list of rooms for zone1
 
         String Ro = getString(R.string.Rome); // get the room name from res/values/strings.xml
         Room Rom = new Room(Ro); // Create a room object with the name
-        Rom.setCapacity(getResources().getInteger(R.integer.Rome));
+        Rom.setCapacity(getResources().getInteger(R.integer.Meeting_Room));
         zone5.add(Rom); // add the room to the list of rooms for zone1
 
         String Q504 = getString(R.string.Quiet_Room_5_04); // get the room name from res/values/strings.xml
@@ -361,32 +387,32 @@ public class initialui extends Activity {
         List<Room> zone6 = new ArrayList<>();
         String W = getString(R.string.Wellington); // get the room name from res/values/strings.xml
         Room We = new Room(W); // Create a room object with the name
-        We.setCapacity(getResources().getInteger(R.integer.Wellington));
+        We.setCapacity(getResources().getInteger(R.integer.Meeting_Room));
         zone6.add(We); // add the room to the list of rooms for zone1
 
         String C = getString(R.string.Canberra); // get the room name from res/values/strings.xml
         Room Ca = new Room(C); // Create a room object with the name
-        Ca.setCapacity(getResources().getInteger(R.integer.Canberra));
+        Ca.setCapacity(getResources().getInteger(R.integer.Meeting_Room));
         zone6.add(Ca); // add the room to the list of rooms for zone1
 
         String T = getString(R.string.Tokyo); // get the room name from res/values/strings.xml
         Room To = new Room(T); // Create a room object with the name
-        To.setCapacity(getResources().getInteger(R.integer.Tokyo));
+        To.setCapacity(getResources().getInteger(R.integer.Meeting_Room));
         zone6.add(To); // add the room to the list of rooms for zone1
 
         String Wa = getString(R.string.Warsaw); // get the room name from res/values/strings.xml
         Room War = new Room(Wa); // Create a room object with the name
-        War.setCapacity(getResources().getInteger(R.integer.Warsaw));
+        War.setCapacity(getResources().getInteger(R.integer.Meeting_Room));
         zone6.add(War); // add the room to the list of rooms for zone1
 
         String K = getString(R.string.Kiev); // get the room name from res/values/strings.xml
         Room Ki = new Room(K); // Create a room object with the name
-        Ki.setCapacity(getResources().getInteger(R.integer.Kiev));
+        Ki.setCapacity(getResources().getInteger(R.integer.Meeting_Room));
         zone6.add(Ki); // add the room to the list of rooms for zone1
 
         String M = getString(R.string.Moscow); // get the room name from res/values/strings.xml
         Room Mo = new Room(M); // Create a room object with the name
-        Mo.setCapacity(getResources().getInteger(R.integer.Moscow));
+        Mo.setCapacity(getResources().getInteger(R.integer.Meeting_Room));
         zone6.add(Mo); // add the room to the list of rooms for zone1
 
         String Q601 = getString(R.string.Quiet_Room_6_01); // get the room name from res/values/strings.xml
@@ -429,7 +455,7 @@ public class initialui extends Activity {
 
         String J = getString(R.string.Jakarta); // get the room name from res/values/strings.xml
         Room Ja = new Room(J); // Create a room object with the name
-        Ja.setCapacity(getResources().getInteger(R.integer.Jakarta));
+        Ja.setCapacity(getResources().getInteger(R.integer.Meeting_Room));
         zone7.add(Ja); // add the room to the list of rooms for zone1
 
         String Q708 = getString(R.string.Quiet_Room_7_08); // get the room name from res/values/strings.xml
@@ -467,12 +493,12 @@ public class initialui extends Activity {
         List<Room> zone8 = new ArrayList<>();
         String Ho = getString(R.string.Honolulu); // get the room name from res/values/strings.xml
         Room Hon = new Room(Ho); // Create a room object with the name
-        Hon.setCapacity(getResources().getInteger(R.integer.Honolulu));
+        Hon.setCapacity(getResources().getInteger(R.integer.Meeting_Room));
         zone8.add(Hon); // add the room to the list of rooms for zone1
 
         String Ot = getString(R.string.Ottowa); // get the room name from res/values/strings.xml
         Room Ott = new Room(Ot); // Create a room object with the name
-        Ott.setCapacity(getResources().getInteger(R.integer.Ottowa));
+        Ott.setCapacity(getResources().getInteger(R.integer.Meeting_Room));
         zone8.add(Ott); // add the room to the list of rooms for zone1
 
         String An = getString(R.string.Anchorage); // get the room name from res/values/strings.xml
