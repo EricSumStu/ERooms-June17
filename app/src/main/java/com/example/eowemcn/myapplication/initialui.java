@@ -22,6 +22,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -33,6 +34,7 @@ public class initialui extends Activity {
     ArrayList<String> listDataHeader;
     HashMap<String, List<Room>> listDataChild;
     public Button textview4;
+    List<Room> rooms;
 
     public void init4() {
         textview4 = (Button) findViewById(R.id.textview4);
@@ -69,6 +71,10 @@ public class initialui extends Activity {
 
                 newscreen.putExtra("header",  listDataHeader);
                 newscreen.putExtra("children", listDataChild);
+
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("allrooms", (Serializable) rooms);
+                newscreen.putExtras(bundle);
 
                 startActivity(newscreen);
 
@@ -108,7 +114,7 @@ public class initialui extends Activity {
 
         try {
             JSONObject jObject = ReadFileToJSON.readFile(getResources(), R.raw.rooms);
-            List<Room> rooms = JsonToRoomsConverter.convertJSON(jObject);
+            rooms = JsonToRoomsConverter.convertJSON(jObject);
         } catch (IOException e) {
             e.printStackTrace();
         } catch (JSONException e) {

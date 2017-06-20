@@ -47,8 +47,12 @@ public class ZoneListActivity extends Activity {
 
         // preparing Oldlist data
         Bundle extras = getIntent().getExtras();
+        // TODO: Needs to be removed
         listDataHeader = extras.getStringArrayList("header");
         listDataChild = (HashMap<String,  List<Room>>)getIntent().getSerializableExtra("children");
+        // TODO: use this new list of rooms
+        List<Room> rooms = (List<Room>)extras.getSerializable("allrooms");
+
 
         listAdapter = new RoomListAdapter(this, listDataHeader, listDataChild);
 

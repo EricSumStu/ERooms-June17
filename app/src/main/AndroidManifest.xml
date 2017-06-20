@@ -25,12 +25,8 @@
         </activity>
         <activity android:name=".map.Maps">
         </activity>
-<<<<<<< HEAD
-        <activity android:name=".FeatureList.initialfeatures"></activity>
         <activity android:name=".free_rooms.freerooms"></activity>
-=======
         <activity android:name=".list.features.FeatureListActivity"></activity>
->>>>>>> f26301e11240afbc91fd342c75a15c98d1344962
     </application>
 
 </manifest>
