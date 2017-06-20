@@ -2,7 +2,7 @@
   "rooms": [
     {
       "name": "Lars Magnus",
-      "capacity": 40,
+      "capacity": 28,
       "type": "Meeting Room",
       "zone": 1,
       "available": false,
@@ -14,7 +14,7 @@
     },
     {
       "name": "Reykjavik",
-      "capacity": 12,
+      "capacity": 10,
       "type": "Meeting Room",
       "zone": 1,
       "available": true,
@@ -132,7 +132,9 @@
       "type": "Meeting Room",
       "zone": 4,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Whiteboard", "number": 4},
+        {"type": "Television", "number": 1}]
     },
     {
       "name": "Kuala Lumpur",
@@ -140,7 +142,9 @@
       "type": "Meeting Room",
       "zone": 4,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Whiteboard", "number": 1},
+        {"type": "Television", "number": 1}]
     },
     {
       "name": "Quiet Room 4.01",
@@ -204,7 +208,11 @@
       "type": "Meeting Room",
       "zone": 5,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Whiteboard", "number": 1},
+        {"type": "Television", "number": 1},
+        {"type": "Camera", "number": 1}
+      ]
     },
     {
       "name": "Berlin",
@@ -212,11 +220,13 @@
       "type": "Meeting Room",
       "zone": 5,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Whiteboard", "number": 1},
+        {"type": "Television", "number": 1}]
     },
     {
       "name": "Helsinki",
-      "capacity": 12,
+      "capacity": 10,
       "type": "Meeting Room",
       "zone": 5,
       "available": true,
@@ -228,7 +238,9 @@
       "type": "Meeting Room",
       "zone": 5,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Whiteboard", "number": 1},
+        {"type": "Television", "number": 1}]
     },
     {
       "name": "Quiet Room 5.04",
@@ -252,7 +264,9 @@
       "type": "Meeting Room",
       "zone": 6,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Whiteboard", "number": 1},
+        {"type": "Television", "number": 1}]
     },
     {
       "name": "Canberra",
@@ -260,7 +274,9 @@
       "type": "Meeting Room",
       "zone": 6,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Whiteboard", "number": 1},
+        {"type": "Television", "number": 1}]
     },
     {
       "name": "Tokyo",
@@ -268,7 +284,9 @@
       "type": "Meeting Room",
       "zone": 6,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Whiteboard", "number": 2},
+        {"type": "Television", "number": 1}]
     },
     {
       "name": "Warsaw",
@@ -276,7 +294,9 @@
       "type": "Meeting Room",
       "zone": 6,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Whiteboard", "number": 1},
+        {"type": "Television", "number": 1}]
     },
     {
       "name": "Kiev",
@@ -284,7 +304,9 @@
       "type": "Meeting Room",
       "zone": 6,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Whiteboard", "number": 3},
+        {"type": "Television", "number": 1}]
     },
     {
       "name": "Moscow",
@@ -292,7 +314,9 @@
       "type": "Meeting Room",
       "zone": 6,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Whiteboard", "number": 1},
+        {"type": "Television", "number": 1}]
     },
     {
       "name": "Quiet Room 6.01",
@@ -348,7 +372,9 @@
       "type": "Meeting Room",
       "zone": 6,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Whiteboard", "number": 1},
+        {"type": "Television", "number": 1}]
     },
     {
       "name": "Jakarta",
@@ -356,7 +382,9 @@
       "type": "Meeting Room",
       "zone": 6,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Whiteboard", "number": 2},
+        {"type": "Television", "number": 1}]
     },
     {
       "name": "Quiet Room 7.08",
@@ -412,7 +440,9 @@
       "type": "Meeting Room",
       "zone": 8,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Whiteboard", "number": 2},
+        {"type": "Television", "number": 1}]
     },
     {
       "name": "Ottowa",
@@ -420,7 +450,9 @@
       "type": "Meeting Room",
       "zone": 8,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Whiteboard", "number": 1},
+        {"type": "Television", "number": 1}]
     },
     {
       "name": "Anchorage",
@@ -428,7 +460,11 @@
       "type": "Meeting Room",
       "zone": 8,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Whiteboard", "number": 1},
+        {"type": "Television", "number": 3},
+        {"type": "Camera", "number": 1}
+        ]
     },
     {
       "name": "Quiet Room 8.12",
@@ -500,7 +536,9 @@
       "type": "Meeting Room",
       "zone": 9,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Whiteboard", "number": 1},
+        {"type": "Television", "number": 1}]
     },
     {
       "name": "Brasilia",
@@ -508,7 +546,9 @@
       "type": "Meeting Room",
       "zone": 9,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Whiteboard", "number": 1},
+        {"type": "Television", "number": 1}]
     },
     {
       "name": "Washington DC",
@@ -516,7 +556,9 @@
       "type": "Meeting Room",
       "zone": 9,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Whiteboard", "number": 1},
+        {"type": "Television", "number": 1}]
     },
     {
       "name": "VA Lab",
@@ -524,7 +566,10 @@
       "type": "Meeting Room",
       "zone": 9,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Whiteboard", "number": 3},
+        {"type": "Projector", "number": 1},
+        {"type": "Computer Monitors", "number": 6}]
     },
     {
       "name": "Quiet Room 9.06",
