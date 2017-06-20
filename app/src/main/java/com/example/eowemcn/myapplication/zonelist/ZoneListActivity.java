@@ -1,4 +1,4 @@
-package com.example.eowemcn.myapplication.list.zones;
+package com.example.eowemcn.myapplication.zonelist;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.eowemcn.myapplication.R;
-import com.example.eowemcn.myapplication.list.RoomListAdapter;
+import com.example.eowemcn.myapplication.zonelist.RoomListAdapter;
 import com.example.eowemcn.myapplication.models.Room;
 import com.example.eowemcn.myapplication.models.Zone;
 

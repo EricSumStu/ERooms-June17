@@ -1,4 +1,4 @@
-package com.example.eowemcn.myapplication.list.features;
+package com.example.eowemcn.myapplication.featureslist;
 import android.app.Activity;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -11,7 +11,8 @@ import android.widget.ExpandableListView.OnGroupExpandListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.eowemcn.myapplication.list.ExpandableListAdapter2;
+import com.example.eowemcn.myapplication.featureslist.FeatureAdapter;
+import com.example.eowemcn.myapplication.featureslist.FeatureListActivity;
 import com.example.eowemcn.myapplication.R;
 
 import java.util.ArrayList;
@@ -21,7 +22,7 @@ import java.util.List;
 public class FeatureListActivity extends Activity {
 
 
-    ExpandableListAdapter2 listAdapter;
+    FeatureAdapter listAdapter;
     ExpandableListView expListView;
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
@@ -45,7 +46,7 @@ public class FeatureListActivity extends Activity {
         Bundle extras = getIntent().getExtras();
         listDataHeader = extras.getStringArrayList("header");
         listDataChild = (HashMap<String, List<String>>) getIntent().getSerializableExtra("children");
-        listAdapter = new ExpandableListAdapter2(this, listDataHeader, listDataChild);
+        listAdapter = new FeatureAdapter(this, listDataHeader, listDataChild);
 
         // setting Oldlist adapter
         expListView.setAdapter(listAdapter);
