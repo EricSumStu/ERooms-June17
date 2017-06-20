@@ -26,6 +26,7 @@
         <activity android:name=".map.Maps">
         </activity>
         <activity android:name=".FeatureList.initialfeatures"></activity>
+        <activity android:name=".free_rooms.freerooms"></activity>
     </application>
 
 </manifest>

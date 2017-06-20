@@ -131,6 +131,9 @@ public class initialui extends Activity {
         Typeface myTypeFace3 = Typeface.createFromAsset(getAssets(), "abc.ttf");
         TextView myTextView3 = (TextView) findViewById(R.id.textview3);
         myTextView3.setTypeface(myTypeFace3);
+        Typeface myTypeFace4 = Typeface.createFromAsset(getAssets(), "abc.ttf");
+        TextView myTextView4 = (TextView) findViewById(R.id.textview4);
+        myTextView4.setTypeface(myTypeFace4);
 
         ImageView myImageView = (ImageView) findViewById(R.id.imageView1);
         myImageView.setImageResource(R.drawable.logo);
