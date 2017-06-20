@@ -1,4 +1,4 @@
-package com.example.eowemcn.myapplication.list;
+package com.example.eowemcn.myapplication.list.zones;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -12,13 +12,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.eowemcn.myapplication.R;
+import com.example.eowemcn.myapplication.list.RoomListAdapter;
 import com.example.eowemcn.myapplication.models.Room;
+import com.example.eowemcn.myapplication.models.Zone;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class ListActivity extends Activity {
+public class ZoneListActivity extends Activity {
 
     private boolean clicked;
     RoomListAdapter listAdapter;
@@ -124,7 +126,19 @@ public class ListActivity extends Activity {
         });
     }
 
-
-
-
+    private void convertRoomsToHeadersAndChildren(List<Room> allRooms){
+        listDataHeader = new ArrayList<String>();
+        int i = 0;
+        for (Zone z : Zone.values()) {
+            listDataHeader.add("Zone " + z.getIntValue());
+            List<Room> zoneRooms = new ArrayList<>();
+            for(Room r : allRooms){
+                if(r.getZone() == z){
+                    zoneRooms.add(r);
+                }
+            }
+            listDataChild.put(listDataHeader.get(i), zoneRooms);
+            i++;
+        }
+    }
 }
