@@ -1,4 +1,4 @@
-package com.example.eowemcn.myapplication.FeatureList;
+package com.example.eowemcn.myapplication.list;
 
 import android.content.Context;
 import android.graphics.Typeface;

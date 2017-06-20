@@ -4,33 +4,24 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.eowemcn.myapplication.FeatureList.initialfeatures;
+import com.example.eowemcn.myapplication.list.features.FeatureListActivity;
 import com.example.eowemcn.myapplication.free_rooms.freerooms;
 import com.example.eowemcn.myapplication.json.JsonToRoomsConverter;
 import com.example.eowemcn.myapplication.json.ReadFileToJSON;
-import com.example.eowemcn.myapplication.list.ListActivity;
+import com.example.eowemcn.myapplication.list.zones.ZoneListActivity;
 import com.example.eowemcn.myapplication.map.Maps;
 import com.example.eowemcn.myapplication.models.Feature;
 import com.example.eowemcn.myapplication.models.Room;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.io.StringWriter;
-import java.io.UnsupportedEncodingException;
-import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -74,7 +65,7 @@ public class initialui extends Activity {
             @Override
             public void onClick(View v) {
 
-                Intent newscreen = new Intent(initialui.this, ListActivity.class);
+                Intent newscreen = new Intent(initialui.this, ZoneListActivity.class);
 
                 newscreen.putExtra("header",  listDataHeader);
                 newscreen.putExtra("children", listDataChild);
@@ -93,7 +84,7 @@ public class initialui extends Activity {
             @Override
             public void onClick(View v) {
 
-                Intent newscreen3 = new Intent(initialui.this, initialfeatures.class);
+                Intent newscreen3 = new Intent(initialui.this, FeatureListActivity.class);
 
                 newscreen3.putExtra("header",  listDataHeader);
                 newscreen3.putExtra("children", listDataChild);

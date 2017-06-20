@@ -1,4 +1,4 @@
-package com.example.eowemcn.myapplication.FeatureList;
+package com.example.eowemcn.myapplication.list.features;
 import android.app.Activity;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -11,13 +11,14 @@ import android.widget.ExpandableListView.OnGroupExpandListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.eowemcn.myapplication.list.ExpandableListAdapter2;
 import com.example.eowemcn.myapplication.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class initialfeatures extends Activity {
+public class FeatureListActivity extends Activity {
 
 
     ExpandableListAdapter2 listAdapter;
