@@ -41,7 +41,9 @@ public class initialfeatures extends Activity {
 
         // preparing Oldlist data
         prepareListData();
-
+        Bundle extras = getIntent().getExtras();
+        listDataHeader = extras.getStringArrayList("header");
+        listDataChild = (HashMap<String, List<String>>) getIntent().getSerializableExtra("children");
         listAdapter = new ExpandableListAdapter2(this, listDataHeader, listDataChild);
 
         // setting Oldlist adapter

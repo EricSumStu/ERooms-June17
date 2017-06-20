@@ -66,6 +66,9 @@ public class initialui extends Activity {
 
                 Intent newscreen3 = new Intent(initialui.this, initialfeatures.class);
 
+                newscreen3.putExtra("header",  listDataHeader);
+                newscreen3.putExtra("children", listDataChild);
+
                 startActivity(newscreen3);
             }
         });
