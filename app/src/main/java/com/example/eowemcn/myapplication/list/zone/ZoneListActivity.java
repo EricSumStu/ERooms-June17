@@ -50,11 +50,9 @@ public class ZoneListActivity extends Activity implements
 
         // preparing Oldlist data
         Bundle extras = getIntent().getExtras();
-        // TODO: Needs to be removed
-        listDataHeader = extras.getStringArrayList("header");
-        listDataChild = (HashMap<String,  List<Room>>)getIntent().getSerializableExtra("children");
-        // TODO: use this new list of rooms
+
         List<Room> rooms = (List<Room>)extras.getSerializable("allrooms");
+        convertRoomsToHeadersAndChildren(rooms);
 
 
         listAdapter = new RoomListAdapter(this, listDataHeader, listDataChild);
@@ -173,6 +171,7 @@ public class ZoneListActivity extends Activity implements
 
     private void convertRoomsToHeadersAndChildren(List<Room> allRooms){
         listDataHeader = new ArrayList<String>();
+        listDataChild = new HashMap<>();
         int i = 0;
         for (Zone z : Zone.values()) {
             listDataHeader.add("Zone " + z.getIntValue());

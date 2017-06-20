@@ -68,12 +68,8 @@ public class initialui extends Activity {
             public void onClick(View v) {
 
                 Intent newscreen = new Intent(initialui.this, ZoneListActivity.class);
-
-                newscreen.putExtra("header",  listDataHeader);
-                newscreen.putExtra("children", listDataChild);
-
                 Bundle bundle = new Bundle();
-                bundle.putSerializable("allrooms", (Serializable) rooms);
+                bundle.putSerializable("allrooms",(Serializable) rooms);
                 newscreen.putExtras(bundle);
 
                 startActivity(newscreen);
