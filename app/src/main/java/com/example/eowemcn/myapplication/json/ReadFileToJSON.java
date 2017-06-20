@@ -15,9 +15,8 @@ import java.io.UnsupportedEncodingException;
 import java.io.Writer;
 
 public class ReadFileToJSON {
-    private JSONObject jObject;
 
-    public ReadFileToJSON(Resources resources, int resource) throws IOException, JSONException {
+    public static JSONObject readFile(Resources resources, int resource) throws IOException, JSONException {
 
         InputStream is = resources.openRawResource(resource); // Open input stream to hold data
         Writer writer = new StringWriter(); // Create a new String Writer to hold new String
@@ -40,10 +39,7 @@ public class ReadFileToJSON {
         String rawString = writer.toString();
 
         // Parse raw String to JSON
-        jObject = new JSONObject(rawString);
+        return new JSONObject(rawString);
     }
 
-    public JSONObject getJSON() {
-        return jObject;
-    }
 }

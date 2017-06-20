@@ -116,8 +116,8 @@ public class initialui extends Activity {
         prepareListData();
 
         try {
-            JSONObject jObject = new ReadFileToJSON(getResources(), R.raw.rooms).getJSON();
-            List<Room> rooms = new JsonToRoomsConverter(jObject).getRooms();
+            JSONObject jObject = ReadFileToJSON.readFile(getResources(), R.raw.rooms);
+            List<Room> rooms = JsonToRoomsConverter.convertJSON(jObject);
         } catch (IOException e) {
             e.printStackTrace();
         } catch (JSONException e) {

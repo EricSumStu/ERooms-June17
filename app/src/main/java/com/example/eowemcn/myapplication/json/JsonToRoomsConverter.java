@@ -14,11 +14,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JsonToRoomsConverter {
-    List<Room> rooms;
 
-    public JsonToRoomsConverter(JSONObject jObject) throws JSONException {
+    public static List<Room> convertJSON(JSONObject jObject) throws JSONException {
         // Create a new list of Rooms (to fill)
-        rooms = new ArrayList<>();
+        List<Room> rooms = new ArrayList<>();
         // Get rooms array from file
         JSONArray jsonRooms = jObject.getJSONArray("rooms");
 
@@ -52,9 +51,7 @@ public class JsonToRoomsConverter {
             Room room = new Room(name, zone, capacity, available, features); // Create a new Room
             rooms.add(room);
         }
-    }
-
-    public List<Room> getRooms() {
         return rooms;
     }
+
 }
