@@ -1,6 +1,8 @@
 package com.example.eowemcn.myapplication.list.zone;
 
 import android.app.Activity;
+import android.app.SearchManager;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ExpandableListView;
@@ -8,6 +10,7 @@ import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.ExpandableListView.OnGroupClickListener;
 import android.widget.ExpandableListView.OnGroupCollapseListener;
 import android.widget.ExpandableListView.OnGroupExpandListener;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,15 +23,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class ZoneListActivity extends Activity {
+public class ZoneListActivity extends Activity implements
+        SearchView.OnQueryTextListener, SearchView.OnCloseListener{
 
     private boolean clicked;
+    private SearchView search;
     RoomListAdapter listAdapter;
     ExpandableListView expListView;
     ArrayList<String> listDataHeader;
     HashMap<String, List<Room>> listDataChild;
-
-
 
 
     @Override
@@ -128,6 +131,44 @@ public class ZoneListActivity extends Activity {
                 return false;
             }
         });
+
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        search = (SearchView) findViewById(R.id.searchview1);
+        search.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+        search.setIconifiedByDefault(false);
+        search.setOnQueryTextListener(this);
+        search.setOnCloseListener(this);
+
+        //expand all Groups
+        expandAll();
+    }
+
+    private void expandAll() {
+        int count = listAdapter.getGroupCount();
+        for (int i = 0; i < count; i++){
+            expListView.expandGroup(i);
+        }
+    }
+
+    @Override
+    public boolean onClose() {
+        listAdapter.filterData("");
+        expandAll();
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String query) {
+        listAdapter.filterData(query);
+        expandAll();
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        listAdapter.filterData(query);
+        expandAll();
+        return false;
     }
 
     private void convertRoomsToHeadersAndChildren(List<Room> allRooms){

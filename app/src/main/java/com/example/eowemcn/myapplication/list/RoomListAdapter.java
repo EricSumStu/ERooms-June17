@@ -2,6 +2,7 @@ package com.example.eowemcn.myapplication.list;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -105,5 +106,10 @@ public class RoomListAdapter extends BaseExpandableListAdapter {
     @Override
     public boolean isChildSelectable(int groupPosition, int childPosition) {
         return true;
+    }
+
+    public void filterData(String query){
+        Log.v("SearchQuery", "Query is: " + query);
+        // TODO: use the search Query
     }
 }
