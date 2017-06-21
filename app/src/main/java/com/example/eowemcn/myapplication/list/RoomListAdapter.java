@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.eowemcn.myapplication.R;
 import com.example.eowemcn.myapplication.models.Room;
@@ -122,10 +123,12 @@ public class RoomListAdapter extends BaseExpandableListAdapter {
 
 
 
-        if(query.isEmpty()){
-            _listDataHeader.addAll(_listDataHeader);
+        if(query.isEmpty() || query == null){
+            _listDataHeader.addAll(originalListDataHeader);
+            _listDataChild.putAll(originalListDataChild);
         }
         else {
+
             // Clear the list as we know the search is used
             _listDataHeader.clear();
             _listDataChild.clear();
@@ -146,9 +149,15 @@ public class RoomListAdapter extends BaseExpandableListAdapter {
                     _listDataHeader.add(header);
                 }
 
+
+
+
             }
+
         }
 
         notifyDataSetChanged();
     }
+
+
 }

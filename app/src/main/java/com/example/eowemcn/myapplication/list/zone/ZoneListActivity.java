@@ -4,12 +4,15 @@ import android.app.Activity;
 import android.app.SearchManager;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.ExpandableListView.OnGroupClickListener;
 import android.widget.ExpandableListView.OnGroupCollapseListener;
 import android.widget.ExpandableListView.OnGroupExpandListener;
+import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,6 +25,8 @@ import com.example.eowemcn.myapplication.models.Zone;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import static android.webkit.ConsoleMessage.MessageLevel.LOG;
 
 public class ZoneListActivity extends Activity implements
         SearchView.OnQueryTextListener, SearchView.OnCloseListener{
@@ -38,6 +43,8 @@ public class ZoneListActivity extends Activity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list);
+
+
 
         /*Typeface myTypeFace4 = Typeface.createFromAsset(getAssets(), "abc.ttf");
         TextView myTextView4 = (TextView) findViewById(R.id.searchview1);
@@ -135,8 +142,27 @@ public class ZoneListActivity extends Activity implements
         search.setOnQueryTextListener(this);
         search.setOnCloseListener(this);
 
-        //expand all Groups
-        expandAll();
+
+        int searchCloseButtonId = search.getContext().getResources()
+                .getIdentifier("android:id/search_close_btn", null, null);
+        ImageView closeButton = (ImageView) this.search.findViewById(searchCloseButtonId);
+
+        closeButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Log.d("Search", "Close clicked");
+
+
+                listAdapter.filterData("");
+                search.setQuery("", false);
+                //Clear the text from EditText view
+
+
+
+
+            }
+        });
     }
 
     private void expandAll() {
@@ -148,7 +174,7 @@ public class ZoneListActivity extends Activity implements
 
     @Override
     public boolean onClose() {
-        listAdapter.filterData("");
+        listAdapter.filterData(null);
         expandAll();
         return false;
     }
@@ -157,6 +183,7 @@ public class ZoneListActivity extends Activity implements
     public boolean onQueryTextChange(String query) {
         listAdapter.filterData(query);
         expandAll();
+
         return false;
     }
 
