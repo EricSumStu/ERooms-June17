@@ -9,6 +9,7 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
 import com.example.eowemcn.myapplication.R;
+import com.example.eowemcn.myapplication.models.Feature;
 
 import java.util.HashMap;
 import java.util.List;
@@ -18,10 +19,10 @@ public class FeatureAdapter extends BaseExpandableListAdapter {
     private Context _context;
     private List<String> _listDataHeader; // header titles
     // child data in format of header title, child title
-    private HashMap<String, List<String>> _listDataChild;
+    private HashMap<String, List<Feature>> _listDataChild;
 
     public FeatureAdapter(Context context, List<String> listDataHeader,
-                                  HashMap<String, List<String>> listChildData) {
+                                  HashMap<String, List<Feature>> listChildData) {
         this._context = context;
         this._listDataHeader = listDataHeader;
         this._listDataChild = listChildData;

@@ -43,8 +43,6 @@ public class ZoneListActivity extends Activity implements
         TextView myTextView4 = (TextView) findViewById(R.id.searchview1);
         myTextView4.setTypeface(myTypeFace4);*/
 
-        final TextView textviewclick = (TextView) findViewById(R.id.lblListItem);
-
         // get the listview
         expListView = (ExpandableListView) findViewById(R.id.lvExp);
 
