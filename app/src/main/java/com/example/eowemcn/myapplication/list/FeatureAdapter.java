@@ -43,7 +43,7 @@ public class FeatureAdapter extends BaseExpandableListAdapter {
     public View getChildView(int groupPosition, final int childPosition,
                              boolean isLastChild, View convertView, ViewGroup parent) {
 
-        final String childText = (String) getChild(groupPosition, childPosition);
+        final String childText = (String) getChild(groupPosition, childPosition).toString();
 
         if (convertView == null) {
             LayoutInflater infalInflater = (LayoutInflater) this._context

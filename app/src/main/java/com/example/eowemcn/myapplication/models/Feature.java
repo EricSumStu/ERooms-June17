@@ -17,7 +17,7 @@ public enum Feature {
     }
 
     public String toString() {
-        return featureName;
+        return this.featureName;
     }
 
     public static Feature getFeature(String feature) {
