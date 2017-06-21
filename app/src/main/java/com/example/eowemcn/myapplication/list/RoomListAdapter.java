@@ -119,25 +119,17 @@ public class RoomListAdapter extends BaseExpandableListAdapter {
 
     public void filterData(String query){
         Log.v("SearchQuery", "Query is: " + query);
-        // TODO: use the search Query
-
-
+        // Clear the list as we know the search is called
+        _listDataHeader.clear();
+        _listDataChild.clear();
 
         if(query.isEmpty() || query == null){
-           // _listDataHeader.removeAll(_listDataHeader);
 
-            _listDataHeader.clear();
-            _listDataChild.clear();
             _listDataHeader.addAll(originalListDataHeader);
             _listDataChild.putAll(originalListDataChild);
         }
         else {
 
-            // Clear the list as we know the search is used
-            _listDataHeader.clear();
-            _listDataChild.clear();
-
-            // _listDataHeader is a list of Strings, that's why you get this error
             for(String header : originalListDataHeader){ // get all headers, represents a zone
                 List<Room> rooms = originalListDataChild.get(header); // get list of rooms under header (zone)
 
