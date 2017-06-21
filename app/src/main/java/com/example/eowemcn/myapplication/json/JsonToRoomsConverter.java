@@ -34,10 +34,10 @@ public class JsonToRoomsConverter {
 
             List<Feature> features = new ArrayList<>();
             try {
-                JSONArray jsonFeatures = jObject.getJSONArray("features");
-                for (int x = 0; x < jsonFeatures.length(); x++) {
-                    JSONObject featureObj = jsonFeatures.getJSONObject(i);
-                    Feature feature = Feature.valueOf(featureObj.getString("type"));
+                JSONArray jsonFeatures = jsonRoom.getJSONArray("features");
+                for (int x = 0; x < jsonFeatures.length()-1; x++) {
+                    JSONObject featureObj = jsonFeatures.getJSONObject(x);
+                    Feature feature = Feature.getFeature(featureObj.getString("type"));
                     int count = featureObj.getInt("number");
                     for (int y = 0; y < count; y++) {
                         features.add(feature);
@@ -46,8 +46,6 @@ public class JsonToRoomsConverter {
             }catch (JSONException e){
                 Log.d("JSON Processing", "No Features for room: " + name);
             }
-
-            // TODO: Get all the values from the JSON Object & add it to Room Object
             Room room = new Room(name, zone, capacity, available, features); // Create a new Room
             rooms.add(room);
         }
