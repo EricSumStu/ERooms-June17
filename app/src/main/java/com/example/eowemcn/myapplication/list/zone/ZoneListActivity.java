@@ -155,11 +155,11 @@ public class ZoneListActivity extends Activity implements
             public void onClick(View v) {
                 Log.d("Search", "Close clicked");
 
-
+                onClose();
                 listAdapter.filterData("");
                 search.setQuery("", false);
 
-                //Clear the text from EditText view
+
 
 
 
@@ -167,9 +167,10 @@ public class ZoneListActivity extends Activity implements
             }
 
 
+
+
         });
     }
-
     private void expandAll() {
         int count = listAdapter.getGroupCount();
         for (int i = 0; i < count; i++){
@@ -177,25 +178,44 @@ public class ZoneListActivity extends Activity implements
         }
     }
 
+    private void collapseAll() {
+        int count = listAdapter.getGroupCount();
+        Toast.makeText(getApplicationContext(),
+                "collapseall = " + count,
+                Toast.LENGTH_SHORT).show();
+        for (int i = 0; i < count; i++){
+            expListView.collapseGroup(i);
+        }
+    }
+
     @Override
     public boolean onClose() {
         listAdapter.filterData("");
-        expandAll();
+        Toast.makeText(getApplicationContext(),
+                "On close called",
+                Toast.LENGTH_SHORT).show();
+
+        collapseAll();
         return false;
     }
-
-
 
     @Override
     public boolean onQueryTextChange(String query) {
         listAdapter.filterData(query);
-        expandAll();
+        //expandAll();
         return false;
     }
 
     @Override
     public boolean onQueryTextSubmit(String query) {
         listAdapter.filterData(query);
+        if(query.isEmpty() || query == null){
+            Toast.makeText(getApplicationContext(),
+                    "list =" + listDataHeader.size(),
+                    Toast.LENGTH_SHORT).show();
+            collapseAll();
+            return false;
+        }
         expandAll();
         return false;
     }

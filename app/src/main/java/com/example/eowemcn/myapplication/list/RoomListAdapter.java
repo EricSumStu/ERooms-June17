@@ -130,6 +130,7 @@ public class RoomListAdapter extends BaseExpandableListAdapter {
             _listDataChild.clear();
             _listDataHeader.addAll(originalListDataHeader);
             _listDataChild.putAll(originalListDataChild);
+
         }
         else {
 
