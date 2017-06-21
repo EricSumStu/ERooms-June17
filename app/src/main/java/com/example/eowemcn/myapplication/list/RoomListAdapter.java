@@ -11,7 +11,11 @@ import android.widget.TextView;
 
 import com.example.eowemcn.myapplication.R;
 import com.example.eowemcn.myapplication.models.Room;
+import com.example.eowemcn.myapplication.models.Zone;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
@@ -19,14 +23,18 @@ public class RoomListAdapter extends BaseExpandableListAdapter {
 
     private Context _context;
     private List<String> _listDataHeader; // header titles
+    private List<String> originalListDataHeader = new ArrayList<>(); // header titles
     // child data in format of header title, child title
     private HashMap<String, List<Room>> _listDataChild;
+    private HashMap<String, List<Room>> originalListDataChild; // header titles
 
     public RoomListAdapter(Context context, List<String> listDataHeader,
                            HashMap<String, List<Room>> listChildData) {
         this._context = context;
         this._listDataHeader = listDataHeader;
         this._listDataChild = listChildData;
+        this.originalListDataHeader.addAll(_listDataHeader);
+        this.originalListDataChild  = new HashMap<>(this._listDataChild);
     }
 
     @Override
@@ -111,5 +119,36 @@ public class RoomListAdapter extends BaseExpandableListAdapter {
     public void filterData(String query){
         Log.v("SearchQuery", "Query is: " + query);
         // TODO: use the search Query
+
+
+
+        if(query.isEmpty()){
+            _listDataHeader.addAll(_listDataHeader);
+        }
+        else {
+            // Clear the list as we know the search is used
+            _listDataHeader.clear();
+            _listDataChild.clear();
+
+            // _listDataHeader is a list of Strings, that's why you get this error
+            for(String header : originalListDataHeader){ // get all headers, represents a zone
+                List<Room> rooms = originalListDataChild.get(header); // get list of rooms under header (zone)
+
+                List<Room> roomsToShow = new ArrayList<>(); // list we will fill with rooms that match
+
+                for (Room room : rooms) { // for every room in zone
+                    if(room.getName().toLowerCase().contains(query)){ // see if room name matches
+                        roomsToShow.add(room);
+                    }
+                }
+                if(roomsToShow.size()>0){ // if we added any rooms, put them on result
+                    _listDataChild.put(header, roomsToShow);
+                    _listDataHeader.add(header);
+                }
+
+            }
+        }
+
+        notifyDataSetChanged();
     }
 }

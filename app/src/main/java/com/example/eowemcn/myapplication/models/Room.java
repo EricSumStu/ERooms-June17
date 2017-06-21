@@ -60,6 +60,7 @@ public class Room implements Comparable<Room>, Serializable{
     }
 
 
+
     public void addFeature(Feature f){
         features.add(f);
     }
@@ -86,5 +87,6 @@ public class Room implements Comparable<Room>, Serializable{
             return 1;
         }
     }
+
 
 }
