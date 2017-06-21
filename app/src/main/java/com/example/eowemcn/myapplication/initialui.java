@@ -40,6 +40,9 @@ public class initialui extends Activity {
             @Override
             public void onClick(View v) {
                 Intent newscreen4 = new Intent(initialui.this, FreeRoomActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("allrooms",(Serializable) rooms);
+                newscreen4.putExtras(bundle);
 
                 startActivity(newscreen4);
             }
