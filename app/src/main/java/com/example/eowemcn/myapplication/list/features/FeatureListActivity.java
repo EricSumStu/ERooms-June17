@@ -17,6 +17,7 @@ import com.example.eowemcn.myapplication.models.Feature;
 import com.example.eowemcn.myapplication.models.Room;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
@@ -127,8 +128,19 @@ public class FeatureListActivity extends Activity {
         for (Room r : allRooms) {
             listDataHeader.add( r.toString());
             List<Feature> feat = r.getFeatures();
+            String s = count(feat);
             listDataChild.put(listDataHeader.get(i), feat);
             i++;
         }
+    }
+
+    private String count(List<Feature> features) {
+        for (Feature f : Feature.values()) {
+            int count = Collections.frequency(features, f);
+            String txtCount = count + " " + f.toString();
+        }
+
+
+        return null;
     }
 }
