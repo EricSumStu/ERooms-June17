@@ -180,9 +180,9 @@ public class ZoneListActivity extends Activity implements
 
     private void collapseAll() {
         int count = listAdapter.getGroupCount();
-        Toast.makeText(getApplicationContext(),
+        /*Toast.makeText(getApplicationContext(),
                 "collapseall = " + count,
-                Toast.LENGTH_SHORT).show();
+                Toast.LENGTH_SHORT).show();*/
         for (int i = 0; i < count; i++){
             expListView.collapseGroup(i);
         }
@@ -191,9 +191,9 @@ public class ZoneListActivity extends Activity implements
     @Override
     public boolean onClose() {
         listAdapter.filterData("");
-        Toast.makeText(getApplicationContext(),
+        /*Toast.makeText(getApplicationContext(),
                 "On close called",
-                Toast.LENGTH_SHORT).show();
+                Toast.LENGTH_SHORT).show();*/
 
         collapseAll();
         return false;
