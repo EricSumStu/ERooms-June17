@@ -107,9 +107,6 @@ public class initialui extends Activity {
         super.onCreate(savedInstancesState);
         setContentView(R.layout.initialui);
 
-        // Get the Room Data
-        prepareListData();
-
         try {
             JSONObject jObject = ReadFileToJSON.readFile(getResources(), R.raw.rooms);
             rooms = JsonToRoomsConverter.convertJSON(jObject);

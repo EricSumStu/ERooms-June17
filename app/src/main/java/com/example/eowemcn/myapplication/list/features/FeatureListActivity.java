@@ -121,12 +121,11 @@ public class FeatureListActivity extends Activity {
 
 
     private void convertRoomsFeaturesToHeadersAndChildren(List<Room> allRooms) {
-        listDataHeader = new ArrayList<String>();
+        listDataHeader = new ArrayList<>();
         listDataChild = new HashMap<>();
         int i = 0;
         for (Room r : allRooms) {
-            listDataHeader.add(r.toString());
-            List<String> features = new ArrayList<>();
+            listDataHeader.add( r.toString());
             List<Feature> feat = r.getFeatures();
             listDataChild.put(listDataHeader.get(i), feat);
             i++;
