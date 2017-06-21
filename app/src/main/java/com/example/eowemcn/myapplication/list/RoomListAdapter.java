@@ -124,6 +124,10 @@ public class RoomListAdapter extends BaseExpandableListAdapter {
 
 
         if(query.isEmpty() || query == null){
+           // _listDataHeader.removeAll(_listDataHeader);
+
+            _listDataHeader.clear();
+            _listDataChild.clear();
             _listDataHeader.addAll(originalListDataHeader);
             _listDataChild.putAll(originalListDataChild);
         }

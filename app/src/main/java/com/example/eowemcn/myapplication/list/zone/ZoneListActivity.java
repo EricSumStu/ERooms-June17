@@ -147,7 +147,9 @@ public class ZoneListActivity extends Activity implements
                 .getIdentifier("android:id/search_close_btn", null, null);
         ImageView closeButton = (ImageView) this.search.findViewById(searchCloseButtonId);
 
+
         closeButton.setOnClickListener(new View.OnClickListener() {
+
 
             @Override
             public void onClick(View v) {
@@ -156,12 +158,15 @@ public class ZoneListActivity extends Activity implements
 
                 listAdapter.filterData("");
                 search.setQuery("", false);
+
                 //Clear the text from EditText view
 
 
 
 
             }
+
+
         });
     }
 
@@ -174,16 +179,17 @@ public class ZoneListActivity extends Activity implements
 
     @Override
     public boolean onClose() {
-        listAdapter.filterData(null);
+        listAdapter.filterData("");
         expandAll();
         return false;
     }
+
+
 
     @Override
     public boolean onQueryTextChange(String query) {
         listAdapter.filterData(query);
         expandAll();
-
         return false;
     }
 
