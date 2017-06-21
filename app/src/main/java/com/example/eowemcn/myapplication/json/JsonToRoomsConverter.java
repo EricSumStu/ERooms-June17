@@ -35,8 +35,10 @@ public class JsonToRoomsConverter {
             List<Feature> features = new ArrayList<>();
             try {
                 JSONArray jsonFeatures = jsonRoom.getJSONArray("features");
-                for (int x = 0; x < jsonFeatures.length()-1; x++) {
+                Log.i(".g", ""+jsonFeatures.length());
+                for (int x = 0; x < jsonFeatures.length(); x++) {
                     JSONObject featureObj = jsonFeatures.getJSONObject(x);
+                    Log.i(".g", featureObj.toString());
                     Feature feature = Feature.getFeature(featureObj.getString("type"));
                     int count = featureObj.getInt("number");
                     for (int y = 0; y < count; y++) {

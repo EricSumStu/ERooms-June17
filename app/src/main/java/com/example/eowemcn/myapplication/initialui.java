@@ -9,13 +9,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.eowemcn.myapplication.list.features.FeatureListActivity;
-import com.example.eowemcn.myapplication.list.availability.FreeRoomActivity;
 import com.example.eowemcn.myapplication.json.JsonToRoomsConverter;
 import com.example.eowemcn.myapplication.json.ReadFileToJSON;
+import com.example.eowemcn.myapplication.list.availability.FreeRoomActivity;
+import com.example.eowemcn.myapplication.list.features.FeatureListActivity;
 import com.example.eowemcn.myapplication.list.zone.ZoneListActivity;
 import com.example.eowemcn.myapplication.map.Maps;
-import com.example.eowemcn.myapplication.models.Feature;
 import com.example.eowemcn.myapplication.models.Room;
 
 import org.json.JSONException;
@@ -24,7 +23,6 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
@@ -158,7 +156,7 @@ public class initialui extends Activity {
 
 
         // Adding child data
-        List<Room> zone1 = new ArrayList<>();
+       /* List<Room> zone1 = new ArrayList<>();
         String larsName = getString(R.string.LarsMagnus); // get the room name from res/values/strings.xml
         Room lars = new Room(larsName); // Create a room object with the name
         lars.setCapacity(getResources().getInteger(R.integer.Lars_Magnus));
@@ -562,6 +560,6 @@ public class initialui extends Activity {
         listDataChild.put(listDataHeader.get(5), zone7); // Header
         listDataChild.put(listDataHeader.get(6), zone8); // Header
         listDataChild.put(listDataHeader.get(7), zone9); // Header
+    }*/
     }
-
 }

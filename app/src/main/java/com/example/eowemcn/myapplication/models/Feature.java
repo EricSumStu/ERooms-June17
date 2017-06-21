@@ -7,7 +7,9 @@ package com.example.eowemcn.myapplication.models;
 public enum Feature {
     TV("Television"),
     Projector("Projector"),
-    WB("Whiteboard");
+    WB("Whiteboard"),
+    Camera("Camera"),
+    monitors("Computer Monitors");
 
 
     private String featureName;
