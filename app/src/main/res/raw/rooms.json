@@ -370,7 +370,7 @@
       "name": "Cape Town",
       "capacity": 12,
       "type": "Meeting Room",
-      "zone": 6,
+      "zone": 7,
       "available": true,
       "features": [
         {"type": "Whiteboard", "number": 1},
@@ -380,7 +380,7 @@
       "name": "Jakarta",
       "capacity": 12,
       "type": "Meeting Room",
-      "zone": 6,
+      "zone": 7,
       "available": true,
       "features": [
         {"type": "Whiteboard", "number": 2},
