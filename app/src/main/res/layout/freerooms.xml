@@ -10,7 +10,7 @@
         android:id="@+id/textviewfree"
         android:layout_width="465dp"
         android:layout_height="45dp"
-        android:text="@string/FreeRooms"
+        android:text="@string/Button4"
         android:textColor="#ffffff"
         android:textSize="40sp"
         android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"

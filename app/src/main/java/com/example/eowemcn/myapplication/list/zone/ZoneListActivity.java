@@ -154,12 +154,6 @@ public class ZoneListActivity extends Activity implements
                 onClose();
                 listAdapter.filterData("");
                 search.setQuery("", false);
-
-
-
-
-
-
             }
 
 
