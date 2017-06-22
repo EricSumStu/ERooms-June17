@@ -9,7 +9,7 @@
     <Button
         android:id="@+id/textview2"
         android:background="@drawable/mybutton"
-        android:textSize="27sp"
+        android:textSize="40sp"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_marginLeft="50dp"
@@ -26,7 +26,7 @@
         android:layout_marginTop="48dp"
         android:background="@drawable/mybutton"
         android:text="@string/textview1"
-        android:textSize="27sp"
+        android:textSize="40sp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginLeft="48dp" />
@@ -34,7 +34,7 @@
     <Button
         android:id="@+id/textview3"
         android:background="@drawable/mybutton"
-        android:textSize="27sp"
+        android:textSize="40sp"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_marginTop="47dp"
@@ -47,7 +47,7 @@
     <Button
         android:id="@+id/textview4"
         android:background="@drawable/mybutton"
-        android:textSize="25sp"
+        android:textSize="40sp"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_marginRight="50dp"

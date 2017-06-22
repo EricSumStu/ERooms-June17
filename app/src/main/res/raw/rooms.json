@@ -112,7 +112,12 @@
       "type": "Telepresence Room",
       "zone": 3,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 3},
+        {"type": "Camera", "number": 3},
+        {"type": "Monitors", "number": 3}
+
+      ]
     },
     {
       "name": "Quiet Room 3.36",
