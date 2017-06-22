@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:background="#FF11548B" >
+    android:background="#FF11548B">
 
     <TextView
         android:id="@+id/textviewfree"
         android:layout_width="465dp"
         android:layout_height="45dp"
+        android:text="@string/Header_2"
         android:textColor="#ffffff"
-        android:text="@string/Button4"
-        android:textSize="40sp" />
+        android:textSize="40sp"
+        android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ExpandableListView
+        android:id="@+id/freeExp"
+        android:background="@drawable/list"
+        android:layout_height="506dp"
+        android:layout_width="368dp"
+        tools:layout_editor_absoluteY="53dp"
+        tools:layout_editor_absoluteX="8dp" />
 
 </LinearLayout>

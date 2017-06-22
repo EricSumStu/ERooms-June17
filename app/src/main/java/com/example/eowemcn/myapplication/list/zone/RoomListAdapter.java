@@ -1,4 +1,4 @@
-package com.example.eowemcn.myapplication.list;
+package com.example.eowemcn.myapplication.list.zone;
 
 import android.content.Context;
 import android.graphics.Typeface;

@@ -1,4 +1,4 @@
-package com.example.eowemcn.myapplication.list;
+package com.example.eowemcn.myapplication.list.availability;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -14,15 +14,15 @@ import com.example.eowemcn.myapplication.models.Feature;
 import java.util.HashMap;
 import java.util.List;
 
-public class FeatureAdapter extends BaseExpandableListAdapter {
+public class FreeRoomAdapter extends BaseExpandableListAdapter {
 
     private Context _context;
     private List<String> _listDataHeader; // header titles
     // child data in format of header title, child title
     private HashMap<String, List<Feature>> _listDataChild;
 
-    public FeatureAdapter(Context context, List<String> listDataHeader,
-                                  HashMap<String, List<Feature>> listChildData) {
+    public FreeRoomAdapter(Context context, List<String> listDataHeader,
+                          HashMap<String, List<Feature>> listChildData) {
         this._context = context;
         this._listDataHeader = listDataHeader;
         this._listDataChild = listChildData;
@@ -48,11 +48,11 @@ public class FeatureAdapter extends BaseExpandableListAdapter {
         if (convertView == null) {
             LayoutInflater infalInflater = (LayoutInflater) this._context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = infalInflater.inflate(R.layout.features_item, null);
+            convertView = infalInflater.inflate(R.layout.freeroom_item, null);
         }
 
         TextView txtListChild = (TextView) convertView
-                .findViewById(R.id.fListItem);
+                .findViewById(R.id.freeListItem);
 
         txtListChild.setText(childText);
         return convertView;
@@ -86,11 +86,11 @@ public class FeatureAdapter extends BaseExpandableListAdapter {
         if (convertView == null) {
             LayoutInflater infalInflater = (LayoutInflater) this._context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = infalInflater.inflate(R.layout.features_group, null);
+            convertView = infalInflater.inflate(R.layout.freeroom_group, null);
         }
 
         TextView fListHeader = (TextView) convertView
-                .findViewById(R.id.fListHeader);
+                .findViewById(R.id.freeListHeader);
         fListHeader.setTypeface(null, Typeface.BOLD);
         fListHeader.setText(headerTitle);
 

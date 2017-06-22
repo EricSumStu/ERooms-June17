@@ -6,7 +6,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.ExpandableListView.OnGroupClickListener;
@@ -18,15 +17,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.eowemcn.myapplication.R;
-import com.example.eowemcn.myapplication.list.RoomListAdapter;
 import com.example.eowemcn.myapplication.models.Room;
 import com.example.eowemcn.myapplication.models.Zone;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
-import static android.webkit.ConsoleMessage.MessageLevel.LOG;
 
 public class ZoneListActivity extends Activity implements
         SearchView.OnQueryTextListener, SearchView.OnCloseListener{
