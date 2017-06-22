@@ -21,7 +21,7 @@
         android:id="@+id/freeExp"
         android:background="@drawable/list"
         android:layout_height="506dp"
-        android:layout_width="368dp"
+        android:layout_width="fill_parent"
         tools:layout_editor_absoluteY="53dp"
         tools:layout_editor_absoluteX="8dp" />
 

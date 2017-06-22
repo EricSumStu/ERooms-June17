@@ -13,10 +13,10 @@ android:background="#FF11548B" >
             android:queryHint="Search Room"
     />
 
-        <ExpandableListView
+    <ExpandableListView
     android:id="@+id/lvExp"
     android:background="@drawable/list"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_width="fill_parent"/>
 
 </LinearLayout>
