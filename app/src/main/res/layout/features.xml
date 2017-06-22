@@ -21,7 +21,7 @@
     <ExpandableListView
         android:id="@+id/fExp"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         android:background="@drawable/list"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="53dp"

@@ -10,7 +10,7 @@
         android:id="@+id/textviewfree"
         android:layout_width="465dp"
         android:layout_height="45dp"
-        android:text="@string/Header_2"
+        android:text="@string/FreeRooms"
         android:textColor="#ffffff"
         android:textSize="40sp"
         android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
@@ -20,7 +20,7 @@
     <ExpandableListView
         android:id="@+id/freeExp"
         android:background="@drawable/list"
-        android:layout_height="506dp"
+        android:layout_height="fill_parent"
         android:layout_width="fill_parent"
         tools:layout_editor_absoluteY="53dp"
         tools:layout_editor_absoluteX="8dp" />
