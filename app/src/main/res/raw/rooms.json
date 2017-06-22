@@ -41,7 +41,9 @@
       "type": "Quiet Room",
       "zone": 1,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 1.17",
@@ -49,7 +51,9 @@
       "type": "Quiet Room",
       "zone": 1,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 1.20",
@@ -57,7 +61,9 @@
       "type": "Quiet Room",
       "zone": 1,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 1.21",
@@ -65,7 +71,9 @@
       "type": "Quiet Room",
       "zone": 1,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 1.28",
@@ -73,7 +81,9 @@
       "type": "Quiet Room",
       "zone": 1,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 1.29",
@@ -81,7 +91,9 @@
       "type": "Quiet Room",
       "zone": 1,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Paris",
@@ -108,7 +120,9 @@
       "type": "Quiet Room",
       "zone": 3,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 3.44",
@@ -116,7 +130,9 @@
       "type": "Quiet Room",
       "zone": 3,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 3.45",
@@ -124,7 +140,9 @@
       "type": "Quiet Room",
       "zone": 3,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Demo Room",
@@ -152,7 +170,9 @@
       "type": "Quiet Room",
       "zone": 4,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 4.02",
@@ -160,7 +180,9 @@
       "type": "Quiet Room",
       "zone": 4,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 4.27",
@@ -168,7 +190,9 @@
       "type": "Quiet Room",
       "zone": 4,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 4.45",
@@ -176,7 +200,9 @@
       "type": "Quiet Room",
       "zone": 4,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 4.55",
@@ -184,7 +210,9 @@
       "type": "Quiet Room",
       "zone": 4,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 4.56",
@@ -192,7 +220,9 @@
       "type": "Quiet Room",
       "zone": 4,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 4.57",
@@ -200,7 +230,9 @@
       "type": "Quiet Room",
       "zone": 4,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Stockholm",
@@ -230,7 +262,9 @@
       "type": "Meeting Room",
       "zone": 5,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Rome",
@@ -248,7 +282,9 @@
       "type": "Quiet Room",
       "zone": 5,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 5.10",
@@ -256,7 +292,9 @@
       "type": "Quiet Room",
       "zone": 5,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Wellington",
@@ -323,8 +361,10 @@
       "capacity": 4,
       "type": "Quiet Room",
       "zone": 6,
-      "available": false,
-      "features": []
+      "available": true,
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 6.15",
@@ -332,7 +372,9 @@
       "type": "Quiet Room",
       "zone": 6,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 6.16",
@@ -340,7 +382,9 @@
       "type": "Quiet Room",
       "zone": 6,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 6.29",
@@ -348,7 +392,9 @@
       "type": "Quiet Room",
       "zone": 6,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 6.30",
@@ -356,7 +402,9 @@
       "type": "Quiet Room",
       "zone": 6,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 6.36",
@@ -364,7 +412,9 @@
       "type": "Quiet Room",
       "zone": 6,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Cape Town",
@@ -392,7 +442,9 @@
       "type": "Quiet Room",
       "zone": 7,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 7.09",
@@ -400,7 +452,9 @@
       "type": "Quiet Room",
       "zone": 7,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 7.11",
@@ -408,7 +462,9 @@
       "type": "Quiet Room",
       "zone": 7,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 7.14",
@@ -416,7 +472,9 @@
       "type": "Quiet Room",
       "zone": 7,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 7.19",
@@ -424,7 +482,9 @@
       "type": "Quiet Room",
       "zone": 7,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 7.20",
@@ -432,14 +492,16 @@
       "type": "Quiet Room",
       "zone": 7,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Honolulu",
       "capacity": 12,
       "type": "Meeting Room",
       "zone": 8,
-      "available": false,
+      "available": true,
       "features": [
         {"type": "Whiteboard", "number": 2},
         {"type": "Television", "number": 1}]
@@ -464,7 +526,7 @@
         {"type": "Whiteboard", "number": 1},
         {"type": "Television", "number": 3},
         {"type": "Camera", "number": 1}
-        ]
+      ]
     },
     {
       "name": "Quiet Room 8.12",
@@ -472,7 +534,9 @@
       "type": "Quiet Room",
       "zone": 8,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 8.18",
@@ -480,7 +544,9 @@
       "type": "Quiet Room",
       "zone": 8,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 8.23",
@@ -488,7 +554,9 @@
       "type": "Quiet Room",
       "zone": 8,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 8.28",
@@ -496,7 +564,9 @@
       "type": "Quiet Room",
       "zone": 8,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 8.29",
@@ -504,7 +574,9 @@
       "type": "Quiet Room",
       "zone": 8,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 8.30",
@@ -512,7 +584,9 @@
       "type": "Quiet Room",
       "zone": 8,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 8.34",
@@ -520,22 +594,26 @@
       "type": "Quiet Room",
       "zone": 8,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 8.35",
       "capacity": 4,
       "type": "Quiet Room",
       "zone": 8,
-      "available": false,
-      "features": []
+      "available": true,
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Buenos Aires",
       "capacity": 10,
       "type": "Meeting Room",
       "zone": 9,
-      "available": false,
+      "available": true,
       "features": [
         {"type": "Whiteboard", "number": 1},
         {"type": "Television", "number": 1}]
@@ -577,7 +655,9 @@
       "type": "Quiet Room",
       "zone": 9,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 9.17",
@@ -585,7 +665,9 @@
       "type": "Quiet Room",
       "zone": 9,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 9.25",
@@ -593,7 +675,9 @@
       "type": "Quiet Room",
       "zone": 9,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 9.27",
@@ -601,7 +685,9 @@
       "type": "Quiet Room",
       "zone": 9,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 9.39",
@@ -609,7 +695,9 @@
       "type": "Quiet Room",
       "zone": 9,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 9.41",
@@ -617,7 +705,9 @@
       "type": "Quiet Room",
       "zone": 9,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     },
     {
       "name": "Quiet Room 9.48",
@@ -625,7 +715,9 @@
       "type": "Quiet Room",
       "zone": 9,
       "available": true,
-      "features": []
+      "features": [
+        {"type": "Television", "number": 1},
+        {"type": "Whiteboard", "number": 1}]
     }
   ]
 }
