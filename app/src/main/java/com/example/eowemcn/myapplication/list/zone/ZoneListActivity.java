@@ -134,7 +134,7 @@ public class ZoneListActivity extends Activity implements
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         search = (SearchView) findViewById(R.id.searchview1);
         search.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
-        search.setIconifiedByDefault(false);
+        search.setIconifiedByDefault(true);
         search.setOnQueryTextListener(this);
         search.setOnCloseListener(this);
 
