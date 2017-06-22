@@ -12,7 +12,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.eowemcn.myapplication.R;
-import com.example.eowemcn.myapplication.list.FeatureAdapter;
 import com.example.eowemcn.myapplication.models.Feature;
 import com.example.eowemcn.myapplication.models.Room;
 
