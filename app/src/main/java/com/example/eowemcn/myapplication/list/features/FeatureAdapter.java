@@ -52,7 +52,7 @@ public class FeatureAdapter extends BaseExpandableListAdapter {
         }
 
         TextView txtListChild = (TextView) convertView
-                .findViewById(R.id.fListItem);
+                .findViewById(R.id.freeListItem);
 
         txtListChild.setText(childText);
         return convertView;

@@ -2,20 +2,144 @@ package com.example.eowemcn.myapplication.list.availability;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ExpandableListView;
+import android.widget.ExpandableListView.OnChildClickListener;
+import android.widget.ExpandableListView.OnGroupClickListener;
+import android.widget.ExpandableListView.OnGroupCollapseListener;
+import android.widget.ExpandableListView.OnGroupExpandListener;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.eowemcn.myapplication.R;
+import com.example.eowemcn.myapplication.models.Feature;
 import com.example.eowemcn.myapplication.models.Room;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 
 public class FreeRoomActivity extends Activity {
+
+
+    private boolean clicked;
+    FreeRoomAdapter listAdapter;
+    ExpandableListView expListView;
+    ArrayList<String> listDataHeader;
+    HashMap<String, List<Feature>> listDataChild;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.freerooms);
 
+        // get the listview
+        expListView = (ExpandableListView) findViewById(R.id.freeExp);
+
+        // preparing Oldlist data
         Bundle extras = getIntent().getExtras();
 
         List<Room> rooms = (List<Room>) extras.getSerializable("allrooms");
+        convertRoomsFeaturesToHeadersAndChildren(rooms);
+
+
+        listAdapter = new FreeRoomAdapter(this, listDataHeader, listDataChild);
+
+        // setting Oldlist adapter
+        expListView.setAdapter(listAdapter);
+
+        // Listview Group click listener
+        expListView.setOnGroupClickListener(new OnGroupClickListener() {
+
+            @Override
+            public boolean onGroupClick(ExpandableListView parent, View v,
+                                        int groupPosition, long id) {
+                // Toast.makeText(getApplicationContext(),
+                // "Group Clicked " + listDataHeader.get(groupPosition),
+                // Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+
+        // Listview Group expanded listener
+        expListView.setOnGroupExpandListener(new OnGroupExpandListener() {
+
+            @Override
+            public void onGroupExpand(int groupPosition) {
+                Toast.makeText(getApplicationContext(),
+                        listDataHeader.get(groupPosition) + " Expanded",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Listview Group collasped listener
+        expListView.setOnGroupCollapseListener(new OnGroupCollapseListener() {
+
+            @Override
+            public void onGroupCollapse(int groupPosition) {
+                Toast.makeText(getApplicationContext(),
+                        listDataHeader.get(groupPosition) + " Collapsed",
+                        Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        // Listview on child click listener
+        expListView.setOnChildClickListener(new OnChildClickListener() {
+
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v,
+                                        int groupPosition, int childPosition, long id) {
+                TextView textViewColor = (TextView) v.findViewById(R.id.freeListItem);
+
+
+                if (!clicked) {
+                    textViewColor.setTextColor(getResources().getColor(R.color.drawer_color));
+                    // set the default color
+                    clicked = true;
+                } else {
+                    textViewColor.setTextColor(getResources().getColor(R.color.colorGreen));
+                    //set secondary color
+                    clicked = false;
+                }
+
+
+          /*      Toast.makeText(
+                        getApplicationContext(),
+                        listDataHeader.get(groupPosition)
+                                + " : "
+                                + listDataChild.get(
+                                listDataHeader.get(groupPosition)).get(
+                                childPosition), Toast.LENGTH_SHORT)
+                        .show(); */
+                return false;
+            }
+        });
+    }
+
+
+    private void convertRoomsFeaturesToHeadersAndChildren(List<Room> allRooms) {
+        listDataHeader = new ArrayList<>();
+        listDataChild = new HashMap<>();
+        int i = 0;
+        for (Room r : allRooms) {
+            listDataHeader.add( r.toString());
+            List<Feature> feat = r.getFeatures();
+            String s = count(feat);
+            listDataChild.put(listDataHeader.get(i), feat);
+            i++;
+        }
+    }
+
+    private String count(List<Feature> features) {
+        for (Feature f : Feature.values()) {
+            int count = Collections.frequency(features, f);
+            String txtCount = count + " " + f.toString();
+        }
+
+
+        return null;
     }
 }
