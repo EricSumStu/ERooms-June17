@@ -362,13 +362,9 @@
       "type": "Quiet Room",
       "zone": 6,
       "available": true,
-<<<<<<< HEAD
-      "features": []
-=======
       "features": [
         {"type": "Television", "number": 1},
         {"type": "Whiteboard", "number": 1}]
->>>>>>> 45ba8e17cd29855c07b664e7903f8a522926296f
     },
     {
       "name": "Quiet Room 6.15",
@@ -608,13 +604,9 @@
       "type": "Quiet Room",
       "zone": 8,
       "available": true,
-<<<<<<< HEAD
-      "features": []
-=======
       "features": [
         {"type": "Television", "number": 1},
         {"type": "Whiteboard", "number": 1}]
->>>>>>> 45ba8e17cd29855c07b664e7903f8a522926296f
     },
     {
       "name": "Buenos Aires",
