@@ -123,7 +123,7 @@ public class ZoneListActivity extends Activity implements
                 }
 
 
-          /*      Toast.makeText(
+              /* Toast.makeText(
                         getApplicationContext(),
                         listDataHeader.get(groupPosition)
                                 + " : "
