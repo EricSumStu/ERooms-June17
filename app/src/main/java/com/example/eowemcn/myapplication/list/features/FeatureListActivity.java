@@ -44,8 +44,9 @@ public class FeatureListActivity extends Activity {
         List<Room> rooms = (List<Room>) extras.getSerializable("allrooms");
         convertRoomsFeaturesToHeadersAndChildren(rooms);
 
-
         listAdapter = new FeatureAdapter(this, listDataHeader, listDataChild);
+
+
 
         // setting Oldlist adapter
         expListView.setAdapter(listAdapter);

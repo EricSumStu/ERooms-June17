@@ -91,8 +91,8 @@ public class initialui extends Activity {
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("allrooms",(Serializable) rooms);
                 newscreen3.putExtras(bundle);
-                newscreen3.putExtra("header",  listDataHeader);
-                newscreen3.putExtra("children", listDataChild);
+    //            newscreen3.putExtra("header",  listDataHeader);
+      //          newscreen3.putExtra("children", listDataChild);
 
                 startActivity(newscreen3);
             }

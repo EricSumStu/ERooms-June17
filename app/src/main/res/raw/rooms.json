@@ -5,7 +5,7 @@
       "capacity": 28,
       "type": "Meeting Room",
       "zone": 1,
-      "available": false,
+      "available": true,
       "features": [
         {"type": "Television", "number": 4},
         {"type": "Whiteboard", "number": 4},
@@ -323,7 +323,7 @@
       "capacity": 4,
       "type": "Quiet Room",
       "zone": 6,
-      "available": false,
+      "available": true,
       "features": []
     },
     {
@@ -439,7 +439,7 @@
       "capacity": 12,
       "type": "Meeting Room",
       "zone": 8,
-      "available": false,
+      "available": true,
       "features": [
         {"type": "Whiteboard", "number": 2},
         {"type": "Television", "number": 1}]
@@ -527,7 +527,7 @@
       "capacity": 4,
       "type": "Quiet Room",
       "zone": 8,
-      "available": false,
+      "available": true,
       "features": []
     },
     {
@@ -535,7 +535,7 @@
       "capacity": 10,
       "type": "Meeting Room",
       "zone": 9,
-      "available": false,
+      "available": true,
       "features": [
         {"type": "Whiteboard", "number": 1},
         {"type": "Television", "number": 1}]

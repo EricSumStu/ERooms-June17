@@ -22,7 +22,7 @@ public class FeatureAdapter extends BaseExpandableListAdapter {
     private HashMap<String, List<Feature>> _listDataChild;
 
     public FeatureAdapter(Context context, List<String> listDataHeader,
-                                  HashMap<String, List<Feature>> listChildData) {
+                           HashMap<String, List<Feature>> listChildData) {
         this._context = context;
         this._listDataHeader = listDataHeader;
         this._listDataChild = listChildData;
@@ -52,7 +52,7 @@ public class FeatureAdapter extends BaseExpandableListAdapter {
         }
 
         TextView txtListChild = (TextView) convertView
-                .findViewById(R.id.freeListItem);
+                .findViewById(R.id.fListItem);
 
         txtListChild.setText(childText);
         return convertView;
