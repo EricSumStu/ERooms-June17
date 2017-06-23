@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Vacant Rooms</string>
     <string name="Header">Search by Zone</string>
     <string name="Button1">Map of Campus</string>
     <string name="textview1">List of Rooms</string>
