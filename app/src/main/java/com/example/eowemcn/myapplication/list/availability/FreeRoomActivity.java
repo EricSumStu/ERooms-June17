@@ -31,8 +31,6 @@ public class FreeRoomActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.freerooms);
 
-
-
         /*Typeface myTypeFace4 = Typeface.createFromAsset(getAssets(), "abc.ttf");
         TextView myTextView4 = (TextView) findViewById(R.id.searchview1);
         myTextView4.setTypeface(myTypeFace4);*/
