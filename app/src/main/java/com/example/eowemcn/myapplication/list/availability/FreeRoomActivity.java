@@ -19,7 +19,7 @@ import java.util.List;
 public class FreeRoomActivity extends Activity {
 
 
-    private boolean clicked;
+    private boolean clicked1;
         RoomListAdapter listAdapter;
     ExpandableListView expListView;
     ArrayList<String> listDataHeader;
@@ -87,41 +87,6 @@ public class FreeRoomActivity extends Activity {
 
             }
         });
-
-        // Listview on child click listener
-        expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-
-            @Override
-            public boolean onChildClick(ExpandableListView parent, View v,
-                                        int groupPosition, int childPosition, long id) {
-                TextView textViewColor = (TextView) v.findViewById(R.id.freeListItem);
-
-
-
-
-                if(!clicked){
-                    textViewColor.setTextColor(getResources().getColor(R.color.drawer_color));
-                    // set the default color
-                    clicked = true;
-                }else{
-                    textViewColor.setTextColor(getResources().getColor(R.color.colorGreen));
-                    //set secondary color
-                    clicked = false;
-                }
-
-
-              /* Toast.makeText(
-                        getApplicationContext(),
-                        listDataHeader.get(groupPosition)
-                                + " : "
-                                + listDataChild.get(
-                                listDataHeader.get(groupPosition)).get(
-                                childPosition), Toast.LENGTH_SHORT)
-                        .show(); */
-                return false;
-            }
-        });
-
 
     }
 
