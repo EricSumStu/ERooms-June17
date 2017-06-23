@@ -4,19 +4,15 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ExpandableListView;
-import android.widget.ExpandableListView.OnChildClickListener;
-import android.widget.ExpandableListView.OnGroupClickListener;
-import android.widget.ExpandableListView.OnGroupCollapseListener;
-import android.widget.ExpandableListView.OnGroupExpandListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.eowemcn.myapplication.R;
-import com.example.eowemcn.myapplication.models.Feature;
+import com.example.eowemcn.myapplication.list.zone.RoomListAdapter;
 import com.example.eowemcn.myapplication.models.Room;
+import com.example.eowemcn.myapplication.models.Zone;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
@@ -24,10 +20,10 @@ public class FreeRoomActivity extends Activity {
 
 
     private boolean clicked;
-    FreeRoomAdapter listAdapter;
+        RoomListAdapter listAdapter;
     ExpandableListView expListView;
     ArrayList<String> listDataHeader;
-    HashMap<String, List<Feature>> listDataChild;
+    HashMap<String, List<Room>> listDataChild;
 
 
     @Override
@@ -35,23 +31,29 @@ public class FreeRoomActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.freerooms);
 
+
+
+        /*Typeface myTypeFace4 = Typeface.createFromAsset(getAssets(), "abc.ttf");
+        TextView myTextView4 = (TextView) findViewById(R.id.searchview1);
+        myTextView4.setTypeface(myTypeFace4);*/
+
         // get the listview
         expListView = (ExpandableListView) findViewById(R.id.freeExp);
 
         // preparing Oldlist data
         Bundle extras = getIntent().getExtras();
 
-        List<Room> rooms = (List<Room>) extras.getSerializable("allrooms");
-        convertRoomsFeaturesToHeadersAndChildren(rooms);
+        List<Room> rooms = (List<Room>)extras.getSerializable("allrooms");
+        convertRoomsToHeadersAndChildren(rooms);
 
 
-        listAdapter = new FreeRoomAdapter(this, listDataHeader, listDataChild);
+        listAdapter = new RoomListAdapter(this, listDataHeader, listDataChild);
 
         // setting Oldlist adapter
         expListView.setAdapter(listAdapter);
 
         // Listview Group click listener
-        expListView.setOnGroupClickListener(new OnGroupClickListener() {
+        expListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
 
             @Override
             public boolean onGroupClick(ExpandableListView parent, View v,
@@ -64,7 +66,7 @@ public class FreeRoomActivity extends Activity {
         });
 
         // Listview Group expanded listener
-        expListView.setOnGroupExpandListener(new OnGroupExpandListener() {
+        expListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
 
             @Override
             public void onGroupExpand(int groupPosition) {
@@ -75,7 +77,7 @@ public class FreeRoomActivity extends Activity {
         });
 
         // Listview Group collasped listener
-        expListView.setOnGroupCollapseListener(new OnGroupCollapseListener() {
+        expListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
 
             @Override
             public void onGroupCollapse(int groupPosition) {
@@ -87,7 +89,7 @@ public class FreeRoomActivity extends Activity {
         });
 
         // Listview on child click listener
-        expListView.setOnChildClickListener(new OnChildClickListener() {
+        expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
 
             @Override
             public boolean onChildClick(ExpandableListView parent, View v,
@@ -95,18 +97,20 @@ public class FreeRoomActivity extends Activity {
                 TextView textViewColor = (TextView) v.findViewById(R.id.freeListItem);
 
 
-                if (!clicked) {
+
+
+                if(!clicked){
                     textViewColor.setTextColor(getResources().getColor(R.color.drawer_color));
                     // set the default color
                     clicked = true;
-                } else {
+                }else{
                     textViewColor.setTextColor(getResources().getColor(R.color.colorGreen));
                     //set secondary color
                     clicked = false;
                 }
 
 
-          /*      Toast.makeText(
+              /* Toast.makeText(
                         getApplicationContext(),
                         listDataHeader.get(groupPosition)
                                 + " : "
@@ -117,29 +121,24 @@ public class FreeRoomActivity extends Activity {
                 return false;
             }
         });
+
+
     }
 
-
-    private void convertRoomsFeaturesToHeadersAndChildren(List<Room> allRooms) {
-        listDataHeader = new ArrayList<>();
+    private void convertRoomsToHeadersAndChildren(List<Room> allRooms){
+        listDataHeader = new ArrayList<String>();
         listDataChild = new HashMap<>();
         int i = 0;
-        for (Room r : allRooms) {
-            listDataHeader.add( r.toString());
-            List<Feature> feat = r.getFeatures();
-            String s = count(feat);
-            listDataChild.put(listDataHeader.get(i), feat);
+        for (Zone z : Zone.values()) {
+            listDataHeader.add("Zone " + z.getIntValue());
+            List<Room> zoneRooms = new ArrayList<>();
+            for(Room r : allRooms){
+                if(r.getZone() == z){
+                    zoneRooms.add(r);
+                }
+            }
+            listDataChild.put(listDataHeader.get(i), zoneRooms);
             i++;
         }
-    }
-
-    private String count(List<Feature> features) {
-        for (Feature f : Feature.values()) {
-            int count = Collections.frequency(features, f);
-            String txtCount = count + " " + f.toString();
-        }
-
-
-        return null;
     }
 }
