@@ -89,6 +89,25 @@
 
 
 
+    <string name="next">NEXT</string>
+    <string name="start">GOT IT</string>
+
+    <string name="activity_screen_1_title">Search Your Room!</string>
+    <string name="activity_screen_1_desc">In List of Rooms</string>
+
+    <string name="activity_screen_2_title">Click and Save Your Room</string>
+    <string name="activity_screen_2_desc">In List of rooms</string>
+
+    <string name="activity_screen_3_title">Has it got wgat you need?</string>
+    <string name="activity_screen_3_desc">In Room Features</string>
+
+    <string name="activity_screen_4_title">Locate Your Room</string>
+    <string name="activity_screen_4_desc">Book tickets of any transportation and travel the world!</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+
+
 
 
 
