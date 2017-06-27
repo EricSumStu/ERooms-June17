@@ -17,6 +17,7 @@ import com.example.eowemcn.myapplication.list.zone.ZoneListActivity;
 import com.example.eowemcn.myapplication.map.Maps;
 import com.example.eowemcn.myapplication.models.Room;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -109,7 +110,7 @@ public class initialui extends Activity {
         setContentView(R.layout.initialui);
 
         try {
-            JSONObject jObject = ReadFileToJSON.readFile(getResources(), R.raw.rooms);
+            JSONArray jObject = ReadFileToJSON.readFile(getResources(), R.raw.rooms);
             rooms = JsonToRoomsConverter.convertJSON(jObject);
         } catch (IOException e) {
             e.printStackTrace();

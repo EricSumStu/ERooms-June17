@@ -1,5 +1,4 @@
-{
-  "rooms": [
+[
     {
       "name": "Lars Magnus",
       "capacity": 28,
@@ -724,5 +723,4 @@
         {"type": "Television", "number": 1},
         {"type": "Whiteboard", "number": 1}]
     }
-  ]
-}
+]
