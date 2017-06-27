@@ -2,8 +2,8 @@ package com.example.eowemcn.myapplication.json;
 
 import android.content.res.Resources;
 
+import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -16,7 +16,7 @@ import java.io.Writer;
 
 public class ReadFileToJSON {
 
-    public static JSONObject readFile(Resources resources, int resource) throws IOException, JSONException {
+    public static JSONArray readFile(Resources resources, int resource) throws IOException, JSONException {
 
         InputStream is = resources.openRawResource(resource); // Open input stream to hold data
         Writer writer = new StringWriter(); // Create a new String Writer to hold new String
@@ -39,7 +39,7 @@ public class ReadFileToJSON {
         String rawString = writer.toString();
 
         // Parse raw String to JSON
-        return new JSONObject(rawString);
+        return new JSONArray(rawString);
     }
 
 }

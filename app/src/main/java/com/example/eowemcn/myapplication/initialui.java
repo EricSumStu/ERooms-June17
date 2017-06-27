@@ -11,12 +11,14 @@ import android.widget.TextView;
 
 import com.example.eowemcn.myapplication.json.JsonToRoomsConverter;
 import com.example.eowemcn.myapplication.json.ReadFileToJSON;
+import com.example.eowemcn.myapplication.json.ReadJSONFromServer;
 import com.example.eowemcn.myapplication.list.availability.FreeRoomActivity;
 import com.example.eowemcn.myapplication.list.features.FeatureListActivity;
 import com.example.eowemcn.myapplication.list.zone.ZoneListActivity;
 import com.example.eowemcn.myapplication.map.Maps;
 import com.example.eowemcn.myapplication.models.Room;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -109,8 +111,10 @@ public class initialui extends Activity {
         setContentView(R.layout.initialui);
 
         try {
-            JSONObject jObject = ReadFileToJSON.readFile(getResources(), R.raw.rooms);
-            rooms = JsonToRoomsConverter.convertJSON(jObject);
+            // TODO: Should read from central server
+            // JSONArray jsonArray = ReadJSONFromServer.getJSON("http://myserver.com");
+            JSONArray jsonArray = ReadFileToJSON.readFile(getResources(), R.raw.rooms);
+            rooms = JsonToRoomsConverter.convertJSON(jsonArray);
         } catch (IOException e) {
             e.printStackTrace();
         } catch (JSONException e) {

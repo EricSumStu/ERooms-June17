@@ -1,8 +1,8 @@
 package com.example.eowemcn.myapplication.json;
 
 
+import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,7 +14,7 @@ import javax.net.ssl.HttpsURLConnection;
 
 public class ReadJSONFromServer {
 
-    public static JSONObject getJSON(String url) {
+    public static JSONArray getJSON(String url) {
         HttpsURLConnection con = null;
         try {
             URL u = new URL(url);
@@ -31,7 +31,7 @@ public class ReadJSONFromServer {
             br.close();
 
             // Parse raw String to JSON and return
-            return new JSONObject(String.valueOf(sb));
+            return new JSONArray(String.valueOf(sb));
         } catch (MalformedURLException ex) {
             ex.printStackTrace();
         } catch (IOException ex) {

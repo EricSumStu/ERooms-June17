@@ -15,11 +15,9 @@ import java.util.List;
 
 public class JsonToRoomsConverter {
 
-    public static List<Room> convertJSON(JSONObject jObject) throws JSONException {
+    public static List<Room> convertJSON(JSONArray jsonRooms) throws JSONException {
         // Create a new list of Rooms (to fill)
         List<Room> rooms = new ArrayList<>();
-        // Get rooms array from file
-        JSONArray jsonRooms = jObject.getJSONArray("rooms");
 
         // Go through all the rooms in the JSONArray
         for (int i=0; i < jsonRooms.length(); i++) {
