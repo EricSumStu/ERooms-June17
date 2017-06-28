@@ -9,7 +9,6 @@ import android.widget.Toast;
 import com.example.eowemcn.myapplication.R;
 import com.example.eowemcn.myapplication.list.zone.RoomListAdapter;
 import com.example.eowemcn.myapplication.models.Room;
-import com.example.eowemcn.myapplication.models.Zone;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -98,13 +97,18 @@ public class FreeRoomActivity extends Activity {
         listDataHeader.add("Busy Rooms");
 
         for (Room r : allRooms) {
+            if(r.isAvailable()){
+               freeRooms.add(r);
+            }else{
+                busyRooms.add(r);
+            }
             // if room is free, add to freeRooms list
             // else it's busy and add to busyRooms list
         }
 
         // Put the lists under the headers
-        listDataChild.put(listDataHeader.get(0), allRooms); // should be freeRooms
-        listDataChild.put(listDataHeader.get(1), allRooms); // should be busyRooms
+        listDataChild.put(listDataHeader.get(0), freeRooms); // should be freeRooms
+        listDataChild.put(listDataHeader.get(1), busyRooms); // should be busyRooms
 
     }
 }
