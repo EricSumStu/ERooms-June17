@@ -23,33 +23,39 @@ public class JsonToRoomsConverter {
         for (int i=0; i < jsonRooms.length(); i++) {
             // Get the Individual JSON room
             JSONObject jsonRoom = jsonRooms.getJSONObject(i);
-            Log.d("JSON Processing", "Processing room: " + jsonRoom.getString("name"));
-
-            String name = jsonRoom.getString("name"); // Get the room name
-            Zone zone = Zone.getZone(jsonRoom.getInt("zone"));
-            int capacity = jsonRoom.getInt("capacity");
-            boolean available = jsonRoom.getBoolean("available");
-
-            List<Feature> features = new ArrayList<>();
+            Log.d("JSON Processing", "Processing room: " + jsonRoom.toString());
+            Room room;
             try {
-                JSONArray jsonFeatures = jsonRoom.getJSONArray("features");
-                Log.i(".g", ""+jsonFeatures.length());
-                for (int x = 0; x < jsonFeatures.length(); x++) {
-                    JSONObject featureObj = jsonFeatures.getJSONObject(x);
-                    Log.i(".g", featureObj.toString());
-                    Feature feature = Feature.getFeature(featureObj.getString("type"));
-                    int count = featureObj.getInt("number");
-                    for (int y = 0; y < count; y++) {
-                        features.add(feature);
-                    }
-                }
+                int id = jsonRoom.getInt("id"); // Get the room name
+                String name = jsonRoom.getString("name"); // Get the room name
+                Zone zone = Zone.getZone(jsonRoom.getInt("zone"));
+                int capacity = jsonRoom.getInt("capacity");
+                boolean available = jsonRoom.getBoolean("available");
+
+                // Features
+                List<Feature> features = new ArrayList<>();
+                convertStringToFeature(name, jsonRoom.getString("features1"), features);
+                convertStringToFeature(name, jsonRoom.getString("features2"), features);
+                convertStringToFeature(name, jsonRoom.getString("features3"), features);
+
+                room = new Room(id, name, zone, capacity, available, features); // Create a new Room
+                rooms.add(room);
             }catch (JSONException e){
-                Log.d("JSON Processing", "No Features for room: " + name);
+                Log.e("JSON Processing", "Error for room: " + jsonRoom.toString());
             }
-            Room room = new Room(name, zone, capacity, available, features); // Create a new Room
-            rooms.add(room);
         }
         return rooms;
+    }
+
+    private static void convertStringToFeature(String name, String feature, List<Feature> list){
+        if(feature != null && !feature.isEmpty()){
+            try{
+                Feature f = Feature.getFeature(feature);
+                list.add(Feature.getFeature(feature));
+            }catch(IllegalArgumentException e){
+                Log.e("JSON Processing", "Cannot convert: " + feature + " to a feature for room: " + name);
+            }
+        }
     }
 
 }

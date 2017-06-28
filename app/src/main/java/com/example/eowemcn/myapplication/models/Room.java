@@ -7,17 +7,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Room implements Comparable<Room>, Serializable{
+    private int id;
     private String name;
     private Zone zone;
     private int capacity;
     private boolean availability;
     private List<Feature> features = new ArrayList<>();
 
-    public Room(String name){
-        this.name = name;
-    }
-
-    public Room(String name, Zone zone, int capacity, boolean availability, List<Feature> features){
+    public Room(int id, String name, Zone zone, int capacity, boolean availability, List<Feature> features){
+        this.id = id;
         this.name = name;
         this.zone = zone;
         this.capacity = capacity;
