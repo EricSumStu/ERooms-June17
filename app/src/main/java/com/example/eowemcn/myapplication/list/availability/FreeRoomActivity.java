@@ -87,20 +87,24 @@ public class FreeRoomActivity extends Activity {
 
     }
 
-    private void convertRoomsToHeadersAndChildren(List<Room> allRooms){
+    private void convertRoomsToHeadersAndChildren(List<Room> allRooms) {
         listDataHeader = new ArrayList<String>();
         listDataChild = new HashMap<>();
-        int i = 0;
-        for (Zone z : Zone.values()) {
-            listDataHeader.add("Zone " + z.getIntValue());
-            List<Room> zoneRooms = new ArrayList<>();
-            for(Room r : allRooms){
-                if(r.getZone() == z){
-                    zoneRooms.add(r);
-                }
-            }
-            listDataChild.put(listDataHeader.get(i), zoneRooms);
-            i++;
+        List<Room> freeRooms = new ArrayList<>();
+        List<Room> busyRooms = new ArrayList<>();
+
+        // Add our Headers
+        listDataHeader.add("Free Rooms");
+        listDataHeader.add("Busy Rooms");
+
+        for (Room r : allRooms) {
+            // if room is free, add to freeRooms list
+            // else it's busy and add to busyRooms list
         }
+
+        // Put the lists under the headers
+        listDataChild.put(listDataHeader.get(0), allRooms); // should be freeRooms
+        listDataChild.put(listDataHeader.get(1), allRooms); // should be busyRooms
+
     }
 }
