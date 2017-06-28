@@ -19,7 +19,7 @@
             android:src="@drawable/location" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/activity7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Locate Your Room!"
@@ -29,6 +29,7 @@
             android:textStyle="normal"/>
 
         <TextView
+            android:id="@+id/activity8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"

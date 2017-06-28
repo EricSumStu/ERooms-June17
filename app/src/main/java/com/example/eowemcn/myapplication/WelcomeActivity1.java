@@ -1,8 +1,10 @@
 package com.example.eowemcn.myapplication;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
@@ -23,8 +25,6 @@ public class WelcomeActivity1 extends AppCompatActivity {
 
     private ViewPager viewPager;
     private MyViewPagerAdapter myViewPagerAdapter;
-    private LinearLayout dotsLayout;
-    private TextView[] dots;
     private int[] layouts;
     private Button btnNext;
     private PrefManager prefManager;
@@ -32,6 +32,7 @@ public class WelcomeActivity1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_welcome);
 
        /* prefManager = new PrefManager(this);
         if (!prefManager.isFirstTimeLaunch()) {
@@ -44,12 +45,9 @@ public class WelcomeActivity1 extends AppCompatActivity {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         }
 
-        setContentView(R.layout.activity_welcome);
-
         viewPager = (ViewPager) findViewById(R.id.view_pager);
        // dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
         btnNext = (Button) findViewById(R.id.btn_next);
-
 
         // layouts of all welcome sliders
         // add few more layouts if you want
@@ -68,6 +66,7 @@ public class WelcomeActivity1 extends AppCompatActivity {
         myViewPagerAdapter = new MyViewPagerAdapter();
         viewPager.setAdapter(myViewPagerAdapter);
         viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
+
 
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override

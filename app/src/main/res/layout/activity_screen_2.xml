@@ -18,7 +18,7 @@
             android:src="@drawable/click"/>
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/activity3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Click and Save Your Room!"
@@ -28,6 +28,7 @@
             android:textStyle="normal"/>
 
         <TextView
+            android:id="@+id/activity4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
