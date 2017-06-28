@@ -23,11 +23,11 @@ import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 
 
-public class PutRoomStatus extends AsyncTask<Object, Object, String> {
+public class PutRoomStatusTask extends AsyncTask<Object, Object, String> {
         private ProgressDialog pDialog;
         private Context context;
 
-        public PutRoomStatus(Context context){
+        public PutRoomStatusTask(Context context){
             this.context = context;
         }
 

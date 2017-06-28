@@ -1,31 +1,27 @@
 package com.example.eowemcn.myapplication;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.eowemcn.myapplication.json.JsonToRoomsConverter;
-import com.example.eowemcn.myapplication.json.ReadJSONFromServer;
 import com.example.eowemcn.myapplication.list.availability.FreeRoomActivity;
 import com.example.eowemcn.myapplication.list.features.FeatureListActivity;
 import com.example.eowemcn.myapplication.list.zone.ZoneListActivity;
 import com.example.eowemcn.myapplication.map.Maps;
 import com.example.eowemcn.myapplication.models.Room;
-
-import org.json.JSONArray;
-import org.json.JSONException;
+import com.example.eowemcn.myapplication.tasks.RetrieveRoomsJSONTask;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class initialui extends Activity {
 
@@ -109,8 +105,15 @@ public class initialui extends Activity {
         super.onCreate(savedInstancesState);
         setContentView(R.layout.initialui);
 
+
         // Execute Background Task to get JSON
-        new JSONParse().execute();
+        try {
+            rooms = new RetrieveRoomsJSONTask(initialui.this).execute().get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
 
         Typeface myTypeFace1 = Typeface.createFromAsset(getAssets(), "abc.ttf");
         TextView myTextView1 = (TextView) findViewById(R.id.textview1);
@@ -135,42 +138,6 @@ public class initialui extends Activity {
         init4();
     }
 
-    private class JSONParse extends AsyncTask<String, String, JSONArray> {
-        private ProgressDialog pDialog;
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            pDialog = new ProgressDialog(initialui.this);
-            pDialog.setMessage("Getting Data ...");
-            pDialog.setIndeterminate(false);
-            pDialog.setCancelable(true);
-            pDialog.show();
 
-        }
-
-        @Override
-        protected JSONArray doInBackground(String... args) {
-            JSONArray jsonArray = null;
-
-
-                // TODO: Get server running and put URL here
-                jsonArray = ReadJSONFromServer.getJSON(getString(R.string.URL));
-                //jsonArray = ReadFileToJSON.readFile(getResources(), R.raw.rooms);
-
-
-            return jsonArray;
-        }
-        @Override
-        protected void onPostExecute(JSONArray jsonArray) {
-            pDialog.dismiss();
-            try {
-                // Getting JSON Array
-                rooms = JsonToRoomsConverter.convertJSON(jsonArray);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-
-        }
-    }
 
 }

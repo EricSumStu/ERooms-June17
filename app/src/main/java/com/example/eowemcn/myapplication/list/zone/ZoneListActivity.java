@@ -19,7 +19,7 @@ import android.widget.Toast;
 import com.example.eowemcn.myapplication.R;
 import com.example.eowemcn.myapplication.models.Room;
 import com.example.eowemcn.myapplication.models.Zone;
-import com.example.eowemcn.myapplication.tasks.PutRoomStatus;
+import com.example.eowemcn.myapplication.tasks.PutRoomStatusTask;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -112,7 +112,7 @@ public class ZoneListActivity extends Activity implements
                     clicked = true;
                     List<Room> rooms = listDataChild.get(listDataHeader.get(groupPosition));
                     Room room = rooms.get(childPosition);
-                    new PutRoomStatus(v.getContext()).execute(room);
+                    new PutRoomStatusTask(v.getContext()).execute(room);
 
 
                 }else{
