@@ -1,8 +1,10 @@
 package com.example.eowemcn.myapplication;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -110,16 +112,8 @@ public class initialui extends Activity {
         super.onCreate(savedInstancesState);
         setContentView(R.layout.initialui);
 
-        try {
-            // TODO: Should read from central server
-            // JSONArray jsonArray = ReadJSONFromServer.getJSON("http://myserver.com");
-            JSONArray jsonArray = ReadFileToJSON.readFile(getResources(), R.raw.rooms);
-            rooms = JsonToRoomsConverter.convertJSON(jsonArray);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        // Execute Background Task to get JSON
+        new JSONParse().execute();
 
         Typeface myTypeFace1 = Typeface.createFromAsset(getAssets(), "abc.ttf");
         TextView myTextView1 = (TextView) findViewById(R.id.textview1);
@@ -143,4 +137,49 @@ public class initialui extends Activity {
         init3();
         init4();
     }
+
+    private class JSONParse extends AsyncTask<String, String, JSONArray> {
+        private ProgressDialog pDialog;
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            pDialog = new ProgressDialog(initialui.this);
+            pDialog.setMessage("Getting Data ...");
+            pDialog.setIndeterminate(false);
+            pDialog.setCancelable(true);
+            pDialog.show();
+
+        }
+
+        @Override
+        protected JSONArray doInBackground(String... args) {
+            JSONArray jsonArray = null;
+
+            try {
+                // TODO: Get server running and put URL here
+                //jsonArray = ReadJSONFromServer.getJSON("http://myserver.com");
+                jsonArray = ReadFileToJSON.readFile(getResources(), R.raw.rooms);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+
+            }
+
+            return jsonArray;
+        }
+        @Override
+        protected void onPostExecute(JSONArray jsonArray) {
+            pDialog.dismiss();
+            try {
+                // Getting JSON Array
+                rooms = JsonToRoomsConverter.convertJSON(jsonArray);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+        }
+    }
+
 }
