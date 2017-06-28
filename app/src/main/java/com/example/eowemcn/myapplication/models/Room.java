@@ -23,6 +23,10 @@ public class Room implements Comparable<Room>, Serializable{
         this.features = features;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public String getName(){
         return this.name;
     }
@@ -85,6 +89,7 @@ public class Room implements Comparable<Room>, Serializable{
             return 1;
         }
     }
+
 
 
 }
