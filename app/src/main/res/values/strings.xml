@@ -6,6 +6,7 @@
     <string name="Button3">Room Features</string>
     <string name="Header_2">Room Features</string>
     <string name="Button4">Free Rooms</string>
+    <string name="URL">http://159.107.165.59:8000/rooms</string>
 
     <string name="LarsMagnus">Lars Magnus</string>
     <string name="Reykjavik">Reykjavik</string>

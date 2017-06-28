@@ -154,7 +154,7 @@ public class initialui extends Activity {
 
 
                 // TODO: Get server running and put URL here
-                jsonArray = ReadJSONFromServer.getJSON("http://159.107.167.117:8000/rooms");
+                jsonArray = ReadJSONFromServer.getJSON(getString(R.string.URL));
                 //jsonArray = ReadFileToJSON.readFile(getResources(), R.raw.rooms);
 
 
