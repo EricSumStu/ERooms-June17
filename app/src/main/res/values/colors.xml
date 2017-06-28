@@ -2,8 +2,9 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#d3e1e3</color>
     <color name="colorGreen">#E72FBF04</color>
     <color name="background_material_light">#d3e1e3</color>
     <color name="drawer_color">#ff0900</color>
+    <color name="ericssonBlue">#00285E</color>
 </resources>

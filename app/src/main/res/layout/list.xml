@@ -8,6 +8,7 @@ android:background="#FF11548B" >
         <SearchView
             android:layout_width="match_parent"
             android:id="@+id/searchview1"
+            android:background="@color/colorAccent"
             android:layout_height="wrap_content"
             android:iconifiedByDefault="false"
             android:queryHint="Search Room"
