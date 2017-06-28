@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com.example.eowemcn.myapplication.R;
 import com.example.eowemcn.myapplication.models.Room;
 import com.example.eowemcn.myapplication.models.Zone;
+import com.example.eowemcn.myapplication.tasks.PutRoomStatus;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -105,13 +106,15 @@ public class ZoneListActivity extends Activity implements
                                         int groupPosition, int childPosition, long id) {
                 TextView textViewColor = (TextView) v.findViewById(R.id.lblListItem);
 
-
-
-
                 if(!clicked){
                     textViewColor.setTextColor(getResources().getColor(R.color.drawer_color));
                     // set the default color
                     clicked = true;
+                    List<Room> rooms = listDataChild.get(listDataHeader.get(groupPosition));
+                    Room room = rooms.get(childPosition);
+                    new PutRoomStatus(v.getContext()).execute(room);
+
+
                 }else{
                     textViewColor.setTextColor(getResources().getColor(R.color.colorGreen));
                     //set secondary color
