@@ -12,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.eowemcn.myapplication.json.JsonToRoomsConverter;
-import com.example.eowemcn.myapplication.json.ReadFileToJSON;
 import com.example.eowemcn.myapplication.json.ReadJSONFromServer;
 import com.example.eowemcn.myapplication.list.availability.FreeRoomActivity;
 import com.example.eowemcn.myapplication.list.features.FeatureListActivity;
@@ -22,9 +21,7 @@ import com.example.eowemcn.myapplication.models.Room;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
-import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -155,17 +152,11 @@ public class initialui extends Activity {
         protected JSONArray doInBackground(String... args) {
             JSONArray jsonArray = null;
 
-            try {
-                // TODO: Get server running and put URL here
-                //jsonArray = ReadJSONFromServer.getJSON("http://myserver.com");
-                jsonArray = ReadFileToJSON.readFile(getResources(), R.raw.rooms);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            } finally {
 
-            }
+                // TODO: Get server running and put URL here
+                jsonArray = ReadJSONFromServer.getJSON("http://159.107.167.117:8000/rooms");
+                //jsonArray = ReadFileToJSON.readFile(getResources(), R.raw.rooms);
+
 
             return jsonArray;
         }
