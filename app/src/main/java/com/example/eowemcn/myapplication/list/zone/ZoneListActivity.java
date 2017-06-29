@@ -104,31 +104,25 @@ public class ZoneListActivity extends Activity implements
             public boolean onChildClick(ExpandableListView parent, View v,
                                         int groupPosition, int childPosition, long id) {
                 TextView textViewColor = (TextView) v.findViewById(R.id.lblListItem);
+                List<Room> rooms = listDataChild.get(listDataHeader.get(groupPosition));
+                Room room = rooms.get(childPosition);
 
                 if(!clicked){
                     textViewColor.setTextColor(getResources().getColor(R.color.drawer_color));
                     // set the default color
+                    room.setAvailablity(clicked);
                     clicked = true;
-                    List<Room> rooms = listDataChild.get(listDataHeader.get(groupPosition));
-                    Room room = rooms.get(childPosition);
-                    new PutRoomStatusTask(v.getContext()).execute(room);
-
 
                 }else{
                     textViewColor.setTextColor(getResources().getColor(R.color.colorGreen));
                     //set secondary color
+                    room.setAvailablity(clicked);
                     clicked = false;
                 }
 
+                // Send to Server
+                new PutRoomStatusTask(v.getContext()).execute(room);
 
-              /* Toast.makeText(
-                        getApplicationContext(),
-                        listDataHeader.get(groupPosition)
-                                + " : "
-                                + listDataChild.get(
-                                listDataHeader.get(groupPosition)).get(
-                                childPosition), Toast.LENGTH_SHORT)
-                        .show(); */
                 return false;
             }
         });
