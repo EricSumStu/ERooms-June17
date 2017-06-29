@@ -7,6 +7,7 @@ import android.os.AsyncTask;
 import android.util.Log;
 
 import com.example.eowemcn.myapplication.R;
+import com.example.eowemcn.myapplication.json.RoomToJSONConverter;
 import com.example.eowemcn.myapplication.models.Room;
 
 import org.json.JSONArray;
@@ -26,6 +27,7 @@ import javax.net.ssl.HttpsURLConnection;
 public class PutRoomStatusTask extends AsyncTask<Object, Object, String> {
         private ProgressDialog pDialog;
         private Context context;
+        private static final String TAG = PutRoomStatusTask.class.getName();
 
         public PutRoomStatusTask(Context context){
             this.context = context;
@@ -49,13 +51,7 @@ public class PutRoomStatusTask extends AsyncTask<Object, Object, String> {
                 String u = context.getResources().getString(R.string.URL) + "/" + room.getId() + "/";
                 URL url = new URL(u); // here is your URL path
 
-                JSONObject jsonObject = new JSONObject();
-                jsonObject.put("id", room.getId());
-                jsonObject.put("name", room.getName());
-                jsonObject.put("zone", String.valueOf(room.getZone().getIntValue()));
-                jsonObject.put("capacity", room.getCapacity());
-                jsonObject.put("availability", room.isAvailable());
-
+                JSONObject jsonObject = RoomToJSONConverter.convertRoomToJSON(room);
 
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setReadTimeout(15000 /* milliseconds */);
@@ -68,6 +64,7 @@ public class PutRoomStatusTask extends AsyncTask<Object, Object, String> {
 
                 OutputStream os = conn.getOutputStream();
                 BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
+                Log.d(TAG, "Sending to server: " + jsonObject.toString());
                 writer.write(jsonObject.toString());
 
                 writer.flush();
@@ -96,10 +93,12 @@ public class PutRoomStatusTask extends AsyncTask<Object, Object, String> {
 
                 }
                 else {
+                    Log.e(TAG, "Error response from server: "+responseCode);
                     return new String("false : "+responseCode);
                 }
             }
             catch(Exception e){
+                Log.e(TAG, "Error message from server: " + e.getMessage());
                 return new String("Exception: " + e.getMessage());
             }
 
@@ -108,7 +107,7 @@ public class PutRoomStatusTask extends AsyncTask<Object, Object, String> {
         @Override
         protected void onPostExecute(String result) {
             pDialog.dismiss();
-            Log.e("response", result);
+            Log.d(TAG, "Response from server: " + result);
             // refresh any list
         }
     }
