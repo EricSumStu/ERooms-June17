@@ -80,9 +80,9 @@ public class ZoneListActivity extends Activity implements
 
             @Override
             public void onGroupExpand(int groupPosition) {
-                Toast.makeText(getApplicationContext(),
+               /* Toast.makeText(getApplicationContext(),
                         listDataHeader.get(groupPosition) + " Expanded",
-                        Toast.LENGTH_SHORT).show();
+                        Toast.LENGTH_SHORT).show();*/
             }
         });
 
@@ -91,10 +91,9 @@ public class ZoneListActivity extends Activity implements
 
             @Override
             public void onGroupCollapse(int groupPosition) {
-                Toast.makeText(getApplicationContext(),
+               /* Toast.makeText(getApplicationContext(),
                         listDataHeader.get(groupPosition) + " Collapsed",
-                        Toast.LENGTH_SHORT).show();
-
+                        Toast.LENGTH_SHORT).show(); */
             }
         });
 
@@ -203,9 +202,9 @@ public class ZoneListActivity extends Activity implements
     public boolean onQueryTextSubmit(String query) {
         listAdapter.filterData(query);
         if(query.isEmpty() || query == null){
-            Toast.makeText(getApplicationContext(),
+           /* Toast.makeText(getApplicationContext(),
                     "list =" + listDataHeader.size(),
-                    Toast.LENGTH_SHORT).show();
+                    Toast.LENGTH_SHORT).show();*/
             collapseAll();
             return false;
         }
