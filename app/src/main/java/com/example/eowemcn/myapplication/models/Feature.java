@@ -9,7 +9,7 @@ public enum Feature {
     Projector("Projector"),
     WB("Whiteboard"),
     Camera("Camera"),
-    monitors("Computer Monitors"),
+    monitors("Computer Monitor"),
     conference("Monitors");
 
 

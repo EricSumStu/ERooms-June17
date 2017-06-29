@@ -6,17 +6,6 @@
     android:orientation="vertical"
     android:background="#FF11548B">
 
-    <TextView
-        android:id="@+id/textviewfree"
-        android:layout_width="465dp"
-        android:layout_height="45dp"
-        android:text="@string/Button4"
-        android:textColor="#ffffff"
-        android:textSize="40sp"
-        android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="0dp" />
-
     <ExpandableListView
         android:id="@+id/freeExp"
         android:background="@drawable/list"

@@ -83,24 +83,30 @@ public class FreeRoomActivity extends Activity {
 
             }
         });
-
+        expandAll();
+    }
+    private void expandAll() {
+        int count = listAdapter.getGroupCount();
+        for (int i = 0; i < count; i++){
+            expListView.expandGroup(i);
+        }
     }
 
     private void convertRoomsToHeadersAndChildren(List<Room> allRooms) {
         listDataHeader = new ArrayList<String>();
         listDataChild = new HashMap<>();
         List<Room> freeRooms = new ArrayList<>();
-        List<Room> busyRooms = new ArrayList<>();
+        //List<Room> busyRooms = new ArrayList<>();
 
         // Add our Headers
         listDataHeader.add("Free Rooms");
-        listDataHeader.add("Busy Rooms");
+      //  listDataHeader.add("Busy Rooms");
 
         for (Room r : allRooms) {
             if(r.isAvailable()){
                freeRooms.add(r);
             }else{
-                busyRooms.add(r);
+               // busyRooms.add(r);
             }
             // if room is free, add to freeRooms list
             // else it's busy and add to busyRooms list
@@ -108,7 +114,7 @@ public class FreeRoomActivity extends Activity {
 
         // Put the lists under the headers
         listDataChild.put(listDataHeader.get(0), freeRooms); // should be freeRooms
-        listDataChild.put(listDataHeader.get(1), busyRooms); // should be busyRooms
+       // listDataChild.put(listDataHeader.get(1), busyRooms); // should be busyRooms
 
     }
 }

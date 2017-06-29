@@ -8,7 +8,7 @@
         android:id="@+id/freeListItem"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:textSize="200sp"
         android:clickable="false"
         android:textColor="@color/colorGreen"
         android:paddingTop="5sp"

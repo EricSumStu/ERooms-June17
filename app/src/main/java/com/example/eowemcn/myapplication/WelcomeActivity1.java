@@ -1,24 +1,19 @@
 package com.example.eowemcn.myapplication;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 
 public class WelcomeActivity1 extends AppCompatActivity {
@@ -34,11 +29,11 @@ public class WelcomeActivity1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
-       /* prefManager = new PrefManager(this);
+        prefManager = new PrefManager(this);
         if (!prefManager.isFirstTimeLaunch()) {
             launchSplashScreen();
             finish();
-        }*/
+        }
 
 
         if (Build.VERSION.SDK_INT >= 21) {
@@ -108,7 +103,7 @@ public class WelcomeActivity1 extends AppCompatActivity {
     }
 
     private void launchSplashScreen() {
-       // prefManager.setFirstTimeLaunch(false);
+        prefManager.setFirstTimeLaunch(false);
         startActivity(new Intent(WelcomeActivity1.this, initialui.class));
         finish();
     }
