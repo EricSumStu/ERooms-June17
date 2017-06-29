@@ -64,6 +64,15 @@ public class RoomListAdapter extends BaseExpandableListAdapter {
         TextView txtListChild = (TextView) convertView
                 .findViewById(R.id.lblListItem);
 
+        List<Room> rooms = _listDataChild.get(_listDataHeader.get(groupPosition));
+        Room room = rooms.get(childPosition);
+
+        if(room.isAvailable()){
+            txtListChild.setTextColor(this._context.getResources().getColor(R.color.colorGreen));
+        }else{
+            txtListChild.setTextColor(this._context.getResources().getColor(R.color.drawer_color));
+        }
+
         txtListChild.setText(childText);
         return convertView;
     }
