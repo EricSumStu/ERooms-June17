@@ -105,8 +105,10 @@ public class ZoneListActivity extends Activity implements
                                         int groupPosition, int childPosition, long id) {
                 TextView textViewColor = (TextView) v.findViewById(R.id.lblListItem);
 
+
                 if(!clicked){
                     textViewColor.setTextColor(getResources().getColor(R.color.drawer_color));
+
                     // set the default color
                     clicked = true;
                     List<Room> rooms = listDataChild.get(listDataHeader.get(groupPosition));
